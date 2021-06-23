@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+@font-face {
+  font-family: "Bad-mofo";
+  src: url("../assets/fonts/BadMofo.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  font-family: "poppins", sans-serif;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background-image: url("../assets/goodies-space.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
+
+/*sidebar*/
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.sidebar > a.active,
+.sidebar > a:hover {
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-scroll {
+  position: fixed;
+  z-index: 80000;
+  animation: opacityo 2s linear infinite;
+  opacity: 1;
+  animation-delay: 3s;
+  animation-fill-mode: none;
+}
+
+@keyframes opacityo {
+  0%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 860px) {
+  .sidebar {
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,
+  #btn,
+  #cancel {
+    display: none;
+  }
+  span {
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a {
+    height: 60px;
+  }
+  .sidebar a i {
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/*header*/
+.head {
+  height: 80px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2000;
+}
+
+.heading {
+  font-family: "Bad-mofo";
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 7px;
+  color: rgba(26, 173, 231);
+  transition: 0.3s font-size ease;
+  z-index: 2;
+}
+
+/*container div containing 6 goodies card*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-left: 100px;
+  margin-top: 7em;
+}
+
+/*.cards div contains the individual card*/
+.cards {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+@media (min-width: 40rem) {
+  .cards {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  .cards {
+    width: 33.3%;
+  }
+}
+
+/*the individual cards*/
+.box-wrapper {
+  background-color: #fff;
+  overflow: hidden;
+  max-width: 320px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.651);
+  padding: 0;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.5s;
+  z-index: 2;
+}
+.box-wrapper:hover {
+  transform: scale(1.1);
+}
+.box-wrapper img {
+  max-width: 100%;
+}
+.box-wrapper .success {
+  position: relative;
+  bottom: 50%;
+  left: 37%;
+  opacity: 0;
+  z-index: 999;
+}
+.expanded .box-wrapper .success {
+  opacity: 1;
+  transition: opacity 0.3s 0.6s;
+}
+.box-wrapper .success:before,
+.box-wrapper .success:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #fff;
+}
+.box-wrapper .success:before {
+  width: 40px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+.box-wrapper .success:after {
+  width: 88px;
+  height: 20px;
+  transform: rotate(-45deg);
+  top: -16px;
+  left: 8px;
+}
+.title {
+  font-size: 1.75em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+.desc {
+  color: rgba(26, 173, 231);
+  font-size: 1em;
+}
+.box-content {
+  position: relative;
+  z-index: 1;
+}
+.box-content:before {
+  content: "";
+  width: 200%;
+  height: 100px;
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  transform: rotate(-8deg);
+  top: -50px;
+  left: -10%;
+  z-index: -1;
+}
+.box-content .buy {
+  display: block;
+  top: -80px;
+  right: 30px;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}
+.box-content .buy .cart-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(26, 173, 231);
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 36px;
+  color: #fff;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.box-content .buy .cart-icon i {
+  padding: 15px;
+}
+.expanded .box-content .buy .cart-icon {
+  width: 750px;
+  height: 750px;
+}
+.expanded .box-content .buy .cart-icon i {
+  display: none;
+}
+.box-content .price {
+  font-size: 1.75em;
+  font-weight: 900;
+  display: block;
+  width: 100px;
+  margin: 20px auto 0;
+  position: relative;
+}
+.box-content .price:after,
+.box-content .price:before {
+  content: "";
+  height: 1px;
+  width: 50px;
+  display: block;
+  position: absolute;
+  background-color: #ddd;
+  top: 18px;
+}
+.box-content .price:before {
+  left: -50px;
+}
+.box-content .price:after {
+  right: -50px;
+}
+
+/*particles-js*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}

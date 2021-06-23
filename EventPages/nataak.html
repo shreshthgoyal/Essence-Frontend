@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nataak</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="nav-scroll" id="nav-scroll">
+        <input type="checkbox" id="check" />
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>Explore</header>
+            <a href="../index.html">
+                <i class="fas fa-rocket"></i>
+                <span>Homepage</span>
+            </a>
+            <a href="../RegisterLogin/index.html" >
+                <i class="fas fa-user"></i>
+                <span>Onboard</span>
+            </a>
+            <a href="../index.html#timeline_anchor" class="active">
+                <i class="fas fa-calendar"></i>
+                <span>Events</span>
+            </a>
+            <a href="../goodies/index.html">
+                <i class="fas fa-tag"></i>
+                <span>Goodies</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-question"></i>
+                <span>FAQ's</span>
+            </a>
+            <a href="../index.html#contact_anchor">
+                <i class="far fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+<section>
+  <div class="img">
+    <img src="https://i.ibb.co/xKk0C4J/space-warrior.png" alt="" class="spaceball"> 
+  </div>
+  <div class="profile-card typewriter-effect">
+    <header>
+      <a href="#">
+        <img
+          src="https://image.freepik.com/free-vector/illustration-astronauts-fishing-stars_153233-144.jpg"
+          class="hoverZoomLink">
+      </a>
+      <h1>
+        Nataak
+      </h1>
+      <h2 class="text" id="typewriter-text">
+        " A line for every expression. "
+      </h2>
+    </header>
+    <div class="profile-bio">
+      <p>
+        <a href="#popup1">
+         <p class="heads"><i class="fas fa-info-circle"></i> About</p>
+        </a>
+        <a href="#popup2">
+          <p class="heads"><i class="fas fa-exclamation"></i> Rules</p>
+        </a>
+        <a href="#popup3">
+          <p class="heads"><i class="fas fa-sign-in-alt"></i> Register</p>
+        </a>
+      </p>
+    </div>
+  </div>
+  <h4>What's in for this Event!</h4>
+  <div class="msg">
+  <div class="envelope-area" onclick="envelope.openEnvelope();"></div>
+    <div class="envelope-back"></div>
+    <div class="envelope-message">
+      <p class="small-quote">Event Message</p>
+    </div>
+    <div class="envelope-message-area" onclick="envelope.showMessage();"></div>
+    <div class="envelope-opening"></div>
+    <div class="envelope-front"></div>
+    <div class="envelope-shadow"></div>
+    <div class="display-message">
+      <a class="close-message" href="#" onclick="envelope.closeMessage();"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+      <div class="quote-information">
+        <h1 class="quote">Nukkad Natak is a form of theatrical performance and presentation in outdoor public spaces. Its an old tool through which lot of social awareness campaigns have gained strength, such as family planning, girls education, child labour etc. Showcase your talent this Essence and get a chance to win exciting prizes. </h1>
+        <p class="author">&mdash;&nbsp;Essence'21</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-info-circle" id="cancel"></i>
+        Description
+      </h2>
+      <div class="content">
+        <p>Have you ever wanted to change the way systems and organizations work in our country? Have you thought to bring out CHANGE, REFORM, REVOLUTION? Have your mind ever started the journey of BADLAAV from AAGAZ to ANZAM? If yes, our event 'STREET-PLAY (Nukkad Natak Competition)' is the perfect opportunity. Here, we hit the streets, we sing, we dance, we act, we shout with minds full of thoughts of creating something new. 'The creation of something new is not accomplished by the intellect but by the play instinct.' -Carl Jung Well, it's time to create something new with your voice, action, acting and overall play. We have just one thing to say - BE THE CREATOR OF YOUR OWN WORLD!</p><br>
+        <h2>
+          <i class="fas fa-award" id="cancel"></i> Prizes
+        </h2>
+        <div class="content">
+          <p>Essence brings huge prizes and goodies. <br>Prizes are worth INR 50,000. Goodies,
+            Swags
+            and
+            Other benifits are also waiting for you</p><br>
+          <h2>
+            <i class="fas fa-rupee-sign" id="cancel"></i> Fee
+          </h2>
+          <div class="content">
+            <p><strike>₹700</strike> ₹650</p><br>
+          </div>
+          <h2>
+            <i class="fas fa-user-circle" id="cancel"></i> Head
+          </h2>
+          <div class="content">
+            <p>Rishabh Kumar : +91 1234567890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup2" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-exclamation-circle" id="cancel"></i>Rules
+      </h2>
+      <div class="content">
+        <p>
+        <ul>
+         <li> Team Size: 7-25 (Including all music accompanists).</li>
+         <li> Time Limit: 20 minutes (including setup and clearance time i.e. empty stage to empty stage).</li>
+         <li> The essence of the play should be brought out in Hindi or English or both. However, short snippets in other regional languages are allowed (max. 30 seconds).</li>
+         <li> No electrical appliances (for example, amplifiers) shall be allowed during the performance, whether inside or outside the circle of performance. No plug points will be provided for this purpose.</li>
+         <li> Obscenity (at the discretion of judges) of any kind, is not allowed and may lead to disqualification.</li>
+          <li>In case of any discrepancy, the decision of event organizers will be final.</li>
+        </ul>
+        </p><br>
+        <h2>
+          <i class="fas fa-gavel" id="cancel"></i>Eligiblity Criteria
+        </h2>
+        <div class="content">
+          <p>
+          <ol>
+            <li>
+              Participant must be 18+.
+            </li>
+            <li>
+              He/She should bring 2 passport size photos and an official identity proof.
+            </li>
+            <li>
+              There is no refunding policy.
+            </li>
+            <br>
+          </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup3" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-user-circle" id="cancel"></i>Register
+      </h2>
+      <p> Here button to direct to login / register page </p>
+    </div>
+  </div>
+  
+</section>
+  <div id="particles-js"></div>
+        <script src="particles.js"></script>
+        <script src="index.js"></script>
+
+</body>
+</html>

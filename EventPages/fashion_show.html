@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="nav-scroll" id="nav-scroll">
+    <input type="checkbox" id="check" />
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Explore</header>
+        <a href="#">
+            <i class="fas fa-rocket"></i>
+            <span>Homepage</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-user"></i>
+            <span>Onboard</span>
+        </a>
+        <a href="#" class="active">
+            <i class="fas fa-calendar"></i>
+            <span>Events</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-tag"></i>
+            <span>Goodies</span>
+        </a>
+        <a href="#">
+            <i class="fas fa-question"></i>
+            <span>FAQ's</span>
+        </a>
+        <a href="#">
+            <i class="far fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+</div>
+<section>
+  <div class="img">
+    <img src="https://i.ibb.co/xKk0C4J/space-warrior.png" alt="" class="spaceball"> 
+  </div>
+  <div class="profile-card typewriter-effect">
+    <header>
+      <a href="#">
+        <img
+          src="https://img.freepik.com/free-vector/astronaut-futuristic-space-suit-showing-thumb-up-hand-sign_1441-2684.jpg?size=338&ext=jpg"
+          class="hoverZoomLink">
+      </a>
+      <h1>
+        Fashion Show
+      </h1>
+      <h2 class="text" id="typewriter-text">
+        " A style for every story. "
+      </h2>
+    </header>
+    <div class="profile-bio">
+      <p>
+        <a href="#popup1">
+         <p class="heads"><i class="fas fa-info-circle"></i> About</p>
+        </a>
+        <a href="#popup2">
+          <p class="heads"><i class="fas fa-exclamation"></i> Rules</p>
+        </a>
+        <a href="#popup3">
+          <p class="heads"><i class="fas fa-sign-in-alt"></i> Register</p>
+        </a>
+      </p>
+    </div>
+  </div>
+  <h4>What's in for this Event!</h4>
+  <div class="msg">
+  <div class="envelope-area" onclick="envelope.openEnvelope();"></div>
+    <div class="envelope-back"></div>
+    <div class="envelope-message">
+      <p class="small-quote">Event Message</p>
+    </div>
+    <div class="envelope-message-area" onclick="envelope.showMessage();"></div>
+    <div class="envelope-opening"></div>
+    <div class="envelope-front"></div>
+    <div class="envelope-shadow"></div>
+    <div class="display-message">
+      <a class="close-message" href="#" onclick="envelope.closeMessage();"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+      <div class="quote-information">
+        <h1 class="quote">This year at fashion parade on the stage of Essence 2021, we present to you a show which shows the deep unknowns of cosmos. Get your space suits and be a part of this event. This is an oppurtunity to be the face of our fest. Be the next space member. Be the next you. </h1>
+        <p class="author">&mdash;&nbsp;Essence'21</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-info-circle" id="cancel"></i>
+        Description
+      </h2>
+      <div class="content">
+        <p>If you think you have the ability to walk the stage and entrance the audience, then this event is for you.
+          Bring out your personality in the ultimate battle to be crowned Mr. or Ms! Explore your hidden potential, be
+          the face of our fest. This is a hunt for the best IQ, Conifedence and aptitude.See you this year on the
+          grounds of FestiVista, as it brings amazing prizes for our winners.</p><br>
+        <h2>
+          <i class="fas fa-award" id="cancel"></i> Prizes
+        </h2>
+        <div class="content">
+          <p>FestiVista brings huge prizes and goodies. <br>Prizes are worth INR 20,000. Goodies,
+            Swags
+            and
+            Other benifits are also waiting for you</p><br>
+          <h2>
+            <i class="fas fa-rupee-sign" id="cancel"></i> Fee
+          </h2>
+          <div class="content">
+            <p><strike>₹250</strike> ₹150</p><br>
+          </div>
+          <h2>
+            <i class="fas fa-user-circle" id="cancel"></i> Head
+          </h2>
+          <div class="content">
+            <p>Kshitij Ayush : +91 1234567890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup2" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-exclamation-circle" id="cancel"></i>Rules
+      </h2>
+      <div class="content">
+        <p>
+        <ul>
+          <li>All the tasks will be disclosed at the time of event.</li>
+          <li>Any physical act will lead to direct disqualification of the candidate.</li>
+          <li>Some tasks will be physically challenging and some will be mentally. Participate according to your own
+            potential.</li>
+        </ul>
+        </p><br>
+        <h2>
+          <i class="fas fa-gavel" id="cancel"></i>Eligiblity Criteria
+        </h2>
+        <div class="content">
+          <p>
+          <ol>
+            <li>
+              Participant must be 18+.
+            </li>
+            <li>
+              He/She should bring 2 passport size photos and an official identity proof.
+            </li>
+            <li>
+              There is no refunding policy.
+            </li>
+            <br>
+          </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup3" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-user-circle" id="cancel"></i>Register
+      </h2>
+      <p> Here button to direct to login / register page </p>
+    </div>
+  </div>
+  
+</section>
+  <div id="particles-js"></div>
+        <script src="particles.js"></script>
+        <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dance-Battle</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+ <div class="nav-scroll" id="nav-scroll">
+        <input type="checkbox" id="check" />
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>Explore</header>
+            <a href="../index.html">
+                <i class="fas fa-rocket"></i>
+                <span>Homepage</span>
+            </a>
+            <a href="../RegisterLogin/index.html" >
+                <i class="fas fa-user"></i>
+                <span>Onboard</span>
+            </a>
+            <a href="../index.html#timeline_anchor" class="active">
+                <i class="fas fa-calendar"></i>
+                <span>Events</span>
+            </a>
+            <a href="../goodies/index.html">
+                <i class="fas fa-tag"></i>
+                <span>Goodies</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-question"></i>
+                <span>FAQ's</span>
+            </a>
+            <a href="../index.html#contact_anchor">
+                <i class="far fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+<section>
+  <div class="img">
+    <img src="https://i.ibb.co/xKk0C4J/space-warrior.png" alt="" class="spaceball"> 
+  </div>
+  <div class="profile-card typewriter-effect">
+    <header>
+      <a href="#">
+        <img
+          src="https://img.freepik.com/free-vector/astronaut-futuristic-space-suit-showing-thumb-up-hand-sign_1441-2684.jpg?size=338&ext=jpg"
+          class="hoverZoomLink">
+      </a>
+      <h1>
+        Dance Battle
+      </h1>
+      <h2 class="text" id="typewriter-text">
+        " A step for every song. "
+      </h2>
+    </header>
+    <div class="profile-bio">
+      <p>
+        <a href="#popup1">
+         <p class="heads"><i class="fas fa-info-circle"></i> About</p>
+        </a>
+        <a href="#popup2">
+          <p class="heads"><i class="fas fa-exclamation"></i> Rules</p>
+        </a>
+        <a href="#popup3">
+          <p class="heads"><i class="fas fa-sign-in-alt"></i> Register</p>
+        </a>
+      </p>
+    </div>
+  </div>
+  <h4>What's in for this Event!</h4>
+  <div class="msg">
+  <div class="envelope-area" onclick="envelope.openEnvelope();"></div>
+    <div class="envelope-back"></div>
+    <div class="envelope-message">
+      <p class="small-quote">Event Message</p>
+    </div>
+    <div class="envelope-message-area" onclick="envelope.showMessage();"></div>
+    <div class="envelope-opening"></div>
+    <div class="envelope-front"></div>
+    <div class="envelope-shadow"></div>
+    <div class="display-message">
+      <a class="close-message" href="#" onclick="envelope.closeMessage();"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+      <div class="quote-information">
+        <h1 class="quote">Opportunity dances with those already on the dance floor. So here comes the most awaiting dancing events – Dance Battle, for you which will vibrate your feet and throb your heartbeats. Be ready to rock n roll because Dance Battle is the heat of dance which will take you to the new level of passion to just dance and nothing else. So get ready to put the stage on fire and back the bugs.</h1>
+        <p class="author">&mdash;&nbsp;Essence'21</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-info-circle" id="cancel"></i>
+        Description
+      </h2>
+      <div class="content">
+        <p>Dancing is a conversation that needs not be spoken but is implicitly understood. This event gives the opportunity for an enthusiastic expression of camaraderie and trust as groups dance to the rhythm tying them together as they vie for the top spot.</p><br>
+        <h2>
+          <i class="fas fa-award" id="cancel"></i> Prizes
+        </h2>
+        <div class="content">
+          <p>Essence brings huge prizes and goodies. <br>Prizes are worth INR 50,000. Goodies,
+            Swags
+            and
+            Other benifits are also waiting for you</p><br>
+          <h2>
+            <i class="fas fa-rupee-sign" id="cancel"></i> Fee
+          </h2>
+          <div class="content">
+            <p><strike>₹500</strike> ₹450</p><br>
+          </div>
+          <h2>
+            <i class="fas fa-user-circle" id="cancel"></i> Head
+          </h2>
+          <div class="content">
+            <p>Shreshth Goyal : +91 1234567890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup2" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-exclamation-circle" id="cancel"></i>Rules
+      </h2>
+      <div class="content">
+        <p>
+        <ul>
+          <li>Minimum number of team members = 3, maximum number of team members = 15.</li>
+          <li>Maximum time limit: ● Elimination round: 4 min ● Final round: 6 min</li>
+          <li>All the teams will first have to compete in the elimination round. Only the teams selected by the judge will qualify for the next round.</li>
+         <li> For the final round, the song will be provided to the participant corresponding to the dance skills.</li>
+         <li> It is not necessary for the participants to perform on different songs for the elimination round.</li>
+         <li> Costumes are not necessary for the round but marks will be given for costumes.</li>
+        </ul>
+        </p><br>
+        <h2>
+          <i class="fas fa-gavel" id="cancel"></i>Eligiblity Criteria
+        </h2>
+        <div class="content">
+          <p>
+          <ol>
+            <li>
+              Participant must be 18+.
+            </li>
+            <li>
+              He/She should bring 2 passport size photos and an official identity proof.
+            </li>
+            <li>
+              There is no refunding policy.
+            </li>
+            <br>
+          </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup3" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-user-circle" id="cancel"></i>Register
+      </h2>
+      <p> Here button to direct to login / register page </p>
+    </div>
+  </div>
+  
+</section>
+  <div id="particles-js"></div>
+        <script src="particles.js"></script>
+        <script src="index.js"></script>
+
+</body>
+</html>

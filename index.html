@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css""></noscript>
+
+    <link rel="preload" href="https://unpkg.com/aos@next/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"></noscript>
+    
+    <link rel="preload" href="./landing_styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./landing_styles.css"></noscript>
+    
+    <title>Essence-2021</title>
+</head>
+<body>
+    
+    <div class="well" id="well">
+        <div class="banner panel" id="top">
+            
+            <nav id="nav" data-aos="menu-area" data-aos-anchor-placement="bottom-top" ><a title="About" href="#about_anchor">About</a><a title="Timeline" href="#timeline_anchor">Timeline</a><a title="Pronites" href="#pronites_anchor">Pronites</a><a title="Contact" href="#contact_anchor">Contact</a></nav>
+            
+            <video src="./assets/background.mp4" loop muted autoplay></video>
+            <div class="overlay"></div>
+            <div class="heading">
+                <h1>Essence</h1>
+                <h1>Essence</h1>
+                <p>Step into the unknown.</p>
+                <p>27th June 2021 - 30th June 2021</p>
+
+                <div class="register-button"><a title="Register" href="./RegisterLogin/"></a><div class="left"></div>Register<div class="right"></div></a></div>
+
+                <!-- //countdown timer -->
+                <div id="countdown">
+                  <ul>
+                    <li><div id="days"></div>days</li>
+                    <li><div id="hours"></div>Hours</li>
+                    <li><div id="minutes"></div>Minutes</li>
+                    <li><div id="seconds"></div>Seconds</li>
+                  </ul>
+                  
+                </div>
+                
+            </div>
+            
+        </div>
+    
+        <div class="content">
+            
+          <div class="about panel" id="about_anchor">
+            
+            <!-- sidebar -->
+            <div class="nav-checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+                </label> 
+            
+                <div class="sidebar">
+                    
+                    <header>Explore</header>
+                    <a title="Homepage" href="#top" class="active">
+                        <i class="fas fa-rocket"></i>
+                        <span>Homepage</span>
+                    </a>
+                    <a title="Onboard" href="./RegisterLogin/">
+                        <i class="fas fa-user"></i>
+                        <span>Onboard</span>
+                    </a>
+                    <a title="Events" href="#timeline_anchor" >
+                        <i class="fas fa-calendar"></i>
+                        <span>Events</span>
+                    </a>
+
+                    <a title="Goodies" href="./goodies/">
+                        <i class="fas fa-tag"></i>
+                        <span>Goodies</span>
+                    </a>
+                
+                    <a title="FAQ" href="./faqpage">
+
+                        <i class="fas fa-question"></i>
+                        <span>FAQ's</span>
+                    </a>
+                    <a title="Contact" href="#contact_anchor">
+                        <i class="far fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+              </div>
+            <img id="astronaut" alt="astronaut" src= "./assets/astronaut.webp">
+            <img id="planet" alt="planet"  src="./assets/moon.webp">
+            <div class="about-box">
+                <h1>About</h1>
+                <p class="about-text">We welcome you to Essence- the biggest, most fun college fest of Central India. Join us in the celebration of youth and culture. A wide range of events spread over three ecstatic days will make this an event to reminisce. Do not miss this opportunity! We hope to see you there!</p>
+
+            </div>
+            
+          </div>
+
+          <!-- timeline -->
+          <div class="panel timeline" id="timeline_anchor">
+            <div class="timeline-header"><h1><span data-aos="fade-right">TIME</span><span data-aos="fade-left">LINE</span></h1></div>
+            <div class="timeline-header-mob"><h1>TIMELINE</h1></div>
+            <div class="timeline-container">
+              
+                <section class="card" data-aos="fade-right">
+                    <div class="book">
+                        <div class="first">
+                          <div class="front day1-card">
+                            <h1>DAY 1</h1>
+                          </div>
+                          <div class="back">
+                            <h1>Day 1</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cupiditate expedita est mollitia incidunt deleniti totam! Incidunt voluptatum sed ratione!</p>
+                            
+                          </div>
+                        </div>
+                        <div class="second">
+                          <div><ul><li> <a href="#" title="Opening Ceremony"><div>Opening Ceremony</div><div>11:00AM-12:30PM</div></a> </li>
+                          <li><a href="./EventPages/fashion_show.html" title="Fashion Show"><div>Fashion Show</div><div>1:00PM - 3:00PM</div></a></li>
+                          <li><a href="./EventPages/mrandmsfest.html" title="Mr and Mrs fest"><div>Mr and Ms Fest</div><div>3:00PM - 6:00PM</div></a></li>
+                          <li><a href="./EventPages/treasurehunt.html" title="Treasure Hunt"><div>Treasure Hunt</div><div>7:00PM-12:30AM</div></a></li>
+                          </ul> </div>
+                          <div><p>Click on an event to know more about it.</p></div>
+                        </div>
+                      </div>
+                    <div>
+                       
+                    </div>
+
+                </section>
+                <section class="card-mob">
+                 
+                  <div class="second">
+                    <div><ul><li> <a href="#" title="Opening Ceremony"><div>Opening Ceremony</div><div>11:00AM-12:30PM</div></a> </li>
+                    <li><a href="./EventPages/fashion_show.html" title="Fashion Show"><div>Fashion Show</div><div>1:00PM - 3:00PM</div></a></li>
+                    <li><a href="./EventPages/mrandmsfest.html" title="Mr and Mrs fest"><div>Mr and Ms Fest</div><div>3:00PM - 6:00PM</div></a></li>
+                    <li><a href="./EventPages/treasurehunt.html" title="Treasure Hunt"><div>Treasure Hunt</div><div>7:00PM-12:30AM</div></a></li>
+                    </ul> </div>
+                    <div><p>Click on an event to know more about it.</p></div>
+                  </div>
+                    
+
+              </section>
+                
+                <section class="card" data-aos="fade-left">
+                    <div class="book">
+                        <div class="first">
+                          <div class="front day2-card">
+                            <h1>Day 2</h1>
+                          </div>
+                          <div class="back">
+                            <h1>Day 2</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cupiditate expedita est mollitia incidunt deleniti totam! Incidunt voluptatum sed ratione!</p>
+                            
+                          </div>
+                        </div>
+                        <div class="second">
+                            <div><ul><li> <a href="./EventPages/nataak.html" title="Naatak"><div>Naatak</div><div>11:00AM-12:30PM</div></a> </li>
+                                <li><a href="./EventPages/codeit.html" title="Code It"><div>Code It</div><div>1:00PM - 3:00PM</div></a></li>
+                                <li><a href="./EventPages/cod.html" title="COD Qualifiers"><div>COD Qualifiers</div><div>3:00PM - 6:00PM</div></a></li>
+                                <li><a href="./EventPages/chess.html" title="Chess Qualifiers"><div>Chess Qualifiers</div><div>7:00PM-12:30AM</div></a></li>
+                                </ul> </div>
+                                <div><p>Click on an event to know more about it.</p></div>
+                        </div>
+                      </div>
+                    
+              
+                    <div>
+                      
+                    </div>
+                
+
+                </section>
+                <section class="card-mob">
+                 
+                  <div class="second">
+                    <div><ul><li> <a href="./EventPages/nataak.html" title="Naatak"><div>Naatak</div><div>11:00AM-12:30PM</div></a> </li>
+                        <li><a href="./EventPages/codeit.html" title="Code It"><div>Code It</div><div>1:00PM - 3:00PM</div></a></li>
+                        <li><a href="./EventPages/cod.html" title="COD Qualifiers"><div>COD Qualifiers</div><div>3:00PM - 6:00PM</div></a></li>
+                        <li><a href="./EventPages/chess.html" title="Chess Qualifiers"><div>Chess Qualifiers</div><div>7:00PM-12:30AM</div></a></li>
+                        </ul> </div>
+                        <div><p>Click on an event to know more about it.</p></div>
+                </div>
+                
+
+                </section>
+               
+                <section class="card" data-aos="fade-right">
+                    <div class="book">
+                        <div class="first">
+                          <div class="front day3-card">
+                            <h1>Day 3</h1>
+                          </div>
+                          <div class="back">
+                            <h1>Day 3</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cupiditate expedita est mollitia incidunt deleniti totam! Incidunt voluptatum sed ratione!</p>
+                            
+                          </div>
+                        </div>
+                        <div class="second">
+                            <div>
+                              </h1><ul><li> <a href="./EventPages/openmic.html" title="Open Mic"><div>Open Mic</div><div>11:00AM-12:30PM</div></a> </li>
+                                <li><a href="./EventPages/danceBattle.html" title="Dance Battle"><div>Dance Battle</div><div>1:00PM - 3:00PM</div></a></li>
+                                <li><a href="./EventPages/chess.html" title="Chess Finals"><div>Chess Finals</div><div>3:00PM - 6:00PM</div></a></li>
+                                <li><a href="./EventPages/valoqual.html" title="Valorant Qualifiers"><div>Valorant Qualifiers</div><div>7:00PM-12:30AM</div></a></li>
+                                </ul> </div>
+                                <div><p>Click on an event to know more about it.</p></div>
+                        </div>
+                      </div>
+                    
+                    <div>
+                        
+                    </div>
+
+                </section>
+                <section class="card-mob">
+                 
+                  <div class="second">
+                    <div>
+                      </h1><ul><li> <a href="./EventPages/openmic.html" title="Open Mic"><div>Open Mic</div><div>11:00AM-12:30PM</div></a> </li>
+                        <li><a href="./EventPages/danceBattle.html" title="Dance Battle"><div>Dance Battle</div><div>1:00PM - 3:00PM</div></a></li>
+                        <li><a href="./EventPages/chess.html" title="Chess Finals"><div>Chess Finals</div><div>3:00PM - 6:00PM</div></a></li>
+                        <li><a href="./EventPages/valoqual.html" title="Valorant Qualifiers"><div>Valorant Qualifiers</div><div>7:00PM-12:30AM</div></a></li>
+                        </ul> </div>
+                        <div><p>Click on an event to know more about it.</p></div>
+                </div>
+                
+
+                </section>
+               
+                <section class="card" data-aos="fade-left">
+                    <div class="book">
+                        <div class="first">
+                          <div class="front day4-card">
+                            <h1>Day 4</h1>
+                          </div>
+                          <div class="back">
+                            <h1>Day 4</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cupiditate expedita est mollitia incidunt deleniti totam! Incidunt voluptatum sed ratione!</p>
+                           
+                          </div>
+                        </div>
+                        <div class="second">
+                            <div><ul><li> <a href="./EventPages/openmic.html" title="Open Mic"><div>Open Mic</div><div>11:00AM-12:30PM</div></a> </li>
+                                <li><a href="./EventPages/cod.html" title="COD Finals"><div>COD Finals</div><div>1:00PM - 3:00PM</div></a></li>
+                                <li><a href="./EventPages/valofinal.html" title="Valorant Finals"><div>Valorant Finals</div><div>3:00PM - 6:00PM</div></a></li>
+                                <li><a href="./EventPages/BandEvent.html" title="Band Event"><div>Band Event</div><div>7:00PM-12:30AM</div></a></li>
+                                </ul> </div>
+                                <div><p>Click on an event to know more about it.</p></div>
+                        </div>
+                      </div>
+                    
+                    <div>
+                       
+                    </div>
+
+                </section>
+                <section class="card-mob">
+                 
+                  <div class="second">
+                    <div><ul><li> <a href="./EventPages/openmic.html" title="Open Mic"><div>Open Mic</div><div>11:00AM-12:30PM</div></a> </li>
+                        <li><a href="./EventPages/cod.html" title="COD Finals"><div>COD Finals</div><div>1:00PM - 3:00PM</div></a></li>
+                        <li><a href="./EventPages/valofinal.html" title="Valorant Finals"><div>Valorant Finals</div><div>3:00PM - 6:00PM</div></a></li>
+                        <li><a href="./EventPages/BandEvent.html" title="Band Event"><div>Band Event</div><div>7:00PM-12:30AM</div></a></li>
+                        </ul> </div>
+                        <div><p>Click on an event to know more about it.</p></div>
+                </div>
+                
+
+                </section>
+                <div class="timeline-line"></div>
+               
+            </div>
+        </div>
+        
+        <div id="particles-js"></div>
+      </div>
+      
+      <!-- pronites -->
+      <div class="pronites" id="pronites_anchor">
+        <div class="pronites-header"><h1><span data-aos="fade-down">PRO</span><span data-aos="fade-up">NITES</span></h1></div>
+        <div class="pronites-header-mob"><h1>PRONITES</h1></div>
+        <div class="pronite-box">
+          
+          <div class="pro-content">
+            <img class="slide" alt="Anuv Jain" src="./assets/anuvjain.webp"> 
+            <button id="pronite_rgn_1">Register</button>
+          </div>
+          
+          <div class="pro-content">
+            <img class="slide" alt="Anubhav Singh Bassi" src="./assets/bassi.webp"> 
+            <button id="pronite_rgn_2">Register</button>
+          </div>
+
+          <div class="pro-content">
+            <img class="slide" alt="Abhishek Upmanyu" src="./assets/upmanyu.webp"> 
+            <button id="pronite_rgn_3">Register</button>
+          </div>
+
+          <div class="pro-content">
+            <img class="slide" alt="Odesza" src="./assets/odesza.webp"> 
+            <button id="pronite_rgn_3">Register</button>
+          </div>
+
+          <a id="previous" title="prev" class="arrow">&#10094</a>
+          <a id="next" title="next" class="arrow">&#10095</a>
+          <div id="text-bar">
+            <div id="pro-name">
+              <!-- <h1>ODESZA</h1>
+              <p>30th June 2021</p>
+              <p>10:00PM-12:00AM</p> -->
+            </div>
+          </div>
+        </div>
+          
+        
+      </div>
+    
+
+      <!-- Footer -->
+      <footer class="footer" id="contact_anchor">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Essence</h4>
+              <ul>
+                <li><a title="About us" href="#about_anchor">about us</a></li>
+                <li><a title="Timeline" href="#timeline_anchor">Timeline</a></li>
+                <li><a title="Pronites" href="#pronites_anchor">Pronites</a></li>
+                <li><a title="Top" href="#top">Go to top</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a title="FAQ" href="#">FAQ</a></li>
+                <li><a title="Goodies" href="./goodies/index.html">goodies</a></li>
+                <li><a title="Events" href="#timeline_anchor">events</a></li>
+                <li><a title="Register" href="./RegisterLogin/index.html">register</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Goodies</h4>
+              <ul>
+                <li><a title="Watch" href="#">watch</a></li>
+                <li><a title="Bags" href="#">bag</a></li>
+                <li><a title="Shoes" href="#">shoes</a></li>
+                <li><a title="Dress" href="#">dress</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a title="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a title="Twitter" href="#"><i class="fab fa-twitter"></i></a>
+                <a title="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+                <a title="LinkedIn" href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </footer>
+    </div>
+    
+    <script src="./script.js"></script>
+    
+    <script src="./particles.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset:300,
+            duration:1500
+        });
+    </script>
+    
+</body>
+</html>
+
