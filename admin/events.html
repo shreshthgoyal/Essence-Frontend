@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic" rel="stylesheet">
+
+</head>
+<body>
+    <header role="banner">
+        <h1>Admin Panel</h1>
+        <ul class="utilities">
+          <li class="logout warn"><a href="login.html">Log Out</a></li>
+        </ul>
+      </header>
+      
+      <nav role="navigation">
+        <ul class="main">
+            <li class="dashboard"><a href="dashboard.html"><i class="fas fa-book-reader"> Dashboard</i></a></li>
+            <li class="write"><a href="events.html"><i class="far fa-calendar"> Events</i></a></li>
+            <li class="edit"><a href="pronites.html"><i class="fas fa-icons"> Pronites</i></a></li>
+            <li class="comments"><a href="goodies.html"><i class="fas fa-shopping-basket"> Goodies</i></a></li>
+        </ul>   
+      </nav>
+      
+      <main role="main">
+        <section class="panel important">
+          <h2>Welcome to Admin Panel</h2>
+          <ul>
+            <li>This panel contains information regarding Essence Fest 2021.</li>
+            <li>All the information regarding users,events,goodies,pronites can be found there on the sidebar.</li>
+          </ul>
+        </section>
+        <section class="panel">
+          <h2>Posts</h2>
+          <ul>
+            <li>Users registered to fest our <b></b></li>
+            <li>Most popular goodie: <b></b>.</li>
+            <li>Most popular event: <b></b>.</li>
+          </ul>
+        </section>
+        <section class="panel ">
+          <h2>Events</h2>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Event</th>
+            </tr>
+            <tr>
+              <td>Pete</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>5769</td>
+            </tr>
+          </table>
+        </section>
+        <section class="panel">
+          <h2>Things to keep in mind</h2>
+          <ul>
+            <li>All the events and pronites should be well managed.</li>
+            <li>All the users who ordered goodies should be provided with them on first day itself.</li>
+          </ul>
+        </section>
+      </main>
+    <script src="script.js"></script>
+</body>
+</html>
