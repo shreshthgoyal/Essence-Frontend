@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap");
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-family: "Baloo Thambi 2", cursive;
+}
+ body {
+	 background-color: #171717;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 height: 100vh;
+}
+ .player {
+	 max-width: 300px;
+	 border-radius: 30px;
+	 background: linear-gradient(45deg, #000, #1C1C1C);
+	 box-shadow: 20px 20px 60px #fff, -20px -20px 60px #1c1c1c;
+}
+ .player__poster img {
+	 max-height: 300px;
+	 width: 100%;
+	 border-radius: 30px 30px 0 0;
+	 filter: contrast(60%);
+}
+ .player__info {
+	 margin: 8px;
+	 font-size: 18px;
+	 color: #fff;
+}
+ .player__progress {
+	 width: 95%;
+	 height: 6px;
+	 border-radius: 2px;
+	 background-color: #000;
+	 box-shadow: 20px 20px 60px #000, -20px -20px 60px #1c1c1c;
+	 margin: 4px auto;
+	 cursor: pointer;
+}
+ .player__progress__inner {
+	 background-color: #fff;
+	 width: 0%;
+	 height: 100%;
+	 border-radius: 2px;
+	 position: relative;
+}
+ .player__progress__inner:after {
+	 content: "";
+	 width: 10px;
+	 height: 10px;
+	 border-radius: 50%;
+	 background-color: #fff;
+	 position: absolute;
+	 top: -2px;
+	 right: -5px;
+}
+ .player__controls {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-around;
+	 margin: 1rem;
+}
+ .player__controls button {
+	 border: none;
+	 font-size: 28px;
+	 background-color: #000;
+	 color: #fff;
+	 cursor: pointer;
+	 box-shadow: 20px 20px 60px #000, -20px -20px 60px #1c1c1c;
+	 transition: 0.3s all;
+	 outline: none;
+}
+ .player__controls button:active {
+	 transform: scale(0.9);
+	 outline: none;
+}
+ p.info {
+	 color: #000;
+	 text-align: center;
+	 margin-top: 4rem;
+	 font-size: 14px;
+}
+ ::selection {
+	 background-color: #1c1c1c;
+	 color: #1c1c1c;
+}
+ 
+.text {
+    color: #fff;
+    padding: 55px;
+}
+
+.line {
+    text-align: center;
+}
