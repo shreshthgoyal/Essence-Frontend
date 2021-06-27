@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:5000";
+const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 const urlParams = new URLSearchParams(window.location.search);
 const  token = urlParams.get("token");
 

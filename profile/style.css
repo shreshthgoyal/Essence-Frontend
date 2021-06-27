@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(270deg, #1c1c1c, #171717, #000);
+  background-size: 150% 150%;
+  animation: backgroundAnimation 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.profile {
+  animation: loadProfile 0.6s ease-in-out;
+  animation-fill-mode: both;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-height: 750px;
+  max-width: 900px;
+}
+
+.profile-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
+  width: calc(100% - 75px);
+  height: calc(100% - 110px);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+} 
+
+.profile-image {
+  animation: loadProfileImage 1s ease-in-out 0.5s;
+  animation-fill-mode: both;
+  position: relative;
+  border-radius: 10px;
+  width: 45%;
+  flex: none;
+  background-image: url("http://40.media.tumblr.com/825bc0bba2584019a32dd3e3c924acc4/tumblr_npcpixeoob1txygfho1_500.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+.profile-info {
+  margin-top: 120px;
+  padding: 8% 8% 2% 8%;
+  position: relative;
+}
+
+.profile-info h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0.7rem;
+  position: absolute;
+  color:  #F0F1EA;
+  animation-fill-mode: both;
+}
+
+
+h1.first-name {
+  animation: titleEffect 1s cubic-bezier(0,0.2,0.4,1);
+  top: -95px;
+  left: -85px;
+} 
+
+
+.profile-info h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+.profile-info h2 {
+  color: #0F0F0F;
+}
+
+.profile-info p {
+  line-height: 1.5rem;
+}
+
+.statistics {
+  margin-right: 10px;
+  margin-left: 10px;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.statistics p {
+  margin: 3%;
+  flex: auto;
+  color: #0F0F0F;
+}
+
+.statistics p strong {
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: 200;
+  margin-right: 0.3rem;
+}
+
+.icon {
+  background: transparent no-repeat center;
+  background-size: contain;
+  background-origin: content-box;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border: none;
+  transition: transform 0.5s ease;
+}
+
+.icon:hover {
+  transform: scale(0.9);
+}
+
+.arrow {
+  flex: 0 1 75px;
+  background-image: url("https://zephyo.github.io/22Days/code/3/graphics/arrow.svg");
+}
+
+.right {
+  transform: rotate(180deg);
+}
+
+.right:hover {
+  transform: scale(0.9) rotate(180deg);
+}
+
+.close {
+  background-image: url("https://zephyo.github.io/22Days/code/3/graphics/close.svg");
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
+  .profile {
+    margin: 3%;
+    height: 97%;
+  }
+  .container {
+    height: 86%;
+    flex-direction: column;
+  }
+  .profile-image {
+    height: 40%;
+    width: calc(100% - 90px);
+  }
+  .profile-bg {
+    width: 100%;
+  }
+  h1.first-name {
+    left: 10px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 4/7) {
+  .profile {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes loadProfile {
+ from{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+ to {
+     transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes loadProfileImage {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+ to {
+     transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes titleEffect {
+ from {
+   opacity:0;
+     transform: translateX(-75px);
+  }
+  to {
+     transform: translateX(0px);
+    opacity: 1;
+  }
+}
