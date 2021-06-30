@@ -32,6 +32,7 @@ body {
   left: -240px;
   height: 100%;
   background: #1e1e1e;
+  opacity: 0.85;
   transition: all 0.5s ease;
 }
 .sidebar header {
@@ -60,8 +61,8 @@ body {
 }
 .sidebar > a.active,
 .sidebar > a:hover {
-  border-left: 5px solid #b93632;
-  color: #b93632;
+  border-left: 5px solid rgb(26, 173, 231);
+  color: rgb(26, 173, 231);
 }
 .sidebar a i {
   font-size: 23px;
