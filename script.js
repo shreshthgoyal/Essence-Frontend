@@ -6,7 +6,7 @@
     hour = minute * 60,
     day = hour * 24;
 
-  let festDay = "June 27, 2021 11:00:00",
+  let festDay = "July 27, 2021 11:00:00",
     countDown = new Date(festDay).getTime(),
     x = setInterval(function () {
       let now = new Date().getTime(),

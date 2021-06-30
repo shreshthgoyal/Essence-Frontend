@@ -1,4 +1,9 @@
 /* * * * * General CSS * * * * */
+@font-face {
+  font-family: "Bad-mofo";
+  src: url("../assets/fonts/BadMofo.ttf");
+}
+
 *,
 *::before,
 *::after {
@@ -10,8 +15,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #666666;
-  background: #eaeff4;
+  color: white;
+  background: #3a3a3a;
 }
 
 .wrapper {
@@ -31,8 +36,8 @@ body {
   max-width: 600px;
   height: auto;
   display: flex;
-  background: #ffffff;
-  box-shadow: 0 0 5px #999999;
+  background: rgb(34, 34, 34);
+  box-shadow: 0 0 5px #2c2c2c;
 }
 
 .credit {
@@ -40,13 +45,13 @@ body {
   margin: 25px auto 0 auto;
   width: 100%;
   text-align: center;
-  color: #666666;
+  color: rgba(26, 173, 231);
   font-size: 16px;
   font-weight: 400;
 }
 
 .credit a {
-  color: #222222;
+  color: rgba(26, 173, 231);
   font-size: 16px;
   font-weight: 600;
 }
@@ -61,7 +66,7 @@ body {
   width: 60%;
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
   clip-path: polygon(0 0, 0% 100%, 100% 0);
-  background: #2a3542;
+  background: rgba(26, 173, 231);
 }
 
 .col-right {
@@ -70,7 +75,7 @@ body {
   margin-left: -10%;
 }
 
-@media(max-width: 575.98px) {
+@media (max-width: 575.98px) {
   .container {
     flex-direction: column;
     box-shadow: none;
@@ -90,6 +95,7 @@ body {
 }
 
 .login-text {
+  font-family: "Bad-mofo";
   position: relative;
   width: 100%;
   color: #ffffff;
@@ -115,17 +121,17 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   border-radius: 30px;
-  color: #ffffff;
+  color: rgba(26, 173, 231);
   outline: none;
-  border: 1px solid #ffffff;
-  box-shadow: inset 0 0 0 0 #ffffff;
-  transition: .3s;
-  -webkit-transition: .3s;
+  border: 1px solid rgba(26, 173, 231);
+  box-shadow: inset 0 0 0 0 rgba(26, 173, 231);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
 }
 
 .login-text .btn:hover {
   color: #2a3542;
-  box-shadow: inset 150px 0 0 0 #ffffff;
+  box-shadow: inset 150px 0 0 0 rgba(26, 173, 231);
 }
 
 .login-form {
@@ -134,6 +140,7 @@ body {
 }
 
 .login-form h2 {
+  color: rgba(26, 173, 231);
   margin: 0 0 15px 0;
   font-size: 22px;
   font-weight: 700;
@@ -142,7 +149,7 @@ body {
 .login-form p {
   margin: 0 0 10px 0;
   text-align: left;
-  color: #666666;
+  color: white;
   font-size: 15px;
 }
 
@@ -152,7 +159,7 @@ body {
 }
 
 .login-form p a {
-  color: #2a3542;
+  color: rgba(26, 173, 231);
   font-size: 14px;
   text-decoration: none;
 }
@@ -161,7 +168,7 @@ body {
   display: block;
   width: 100%;
   margin-bottom: 2px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .login-form p:last-child label {
@@ -185,28 +192,28 @@ body {
 }
 
 .login-form input:focus {
-  border-color: #ff574e;
+  border-color: rgba(26, 173, 231);
 }
 
 .login-form button,
-.login-form input[type=submit] {
+.login-form input[type="submit"] {
   display: inline-block;
   width: 100%;
   margin-top: 5px;
-  color: #2a3542;
+  color: rgba(26, 173, 231);
   font-size: 16px;
   letter-spacing: 1px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #2a3542;
+  border: 1px solid rgba(26, 173, 231);
   border-radius: 30px;
-  box-shadow: inset 0 0 0 0 #2a3542;
-  transition: .3s;
-  -webkit-transition: .3s;
+  box-shadow: inset 0 0 0 0 rgba(26, 173, 231);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
 }
 
 .login-form button:hover,
-.login-form input[type=submit]:hover {
+.login-form input[type="submit"]:hover {
   color: #ffffff;
-  box-shadow: inset 250px 0 0 0 #2a3542;
+  box-shadow: inset 250px 0 0 0 rgba(26, 173, 231);
 }

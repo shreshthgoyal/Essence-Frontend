@@ -1,200 +1,378 @@
-* { box-sizing: border-box; }
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+@font-face {
+  font-family: "Bad-mofo";
+  src: url("../assets/fonts/BadMofo.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
-body { 
-    align-items: center;
-    background-image: linear-gradient(-180deg,  hsl(273, 75%, 66%),hsl(240, 73%, 65%)); 
-    display: flex;
-    flex-direction: column;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-weight: 400;
-    height: 100vh;
-    justify-content: center;
-    padding: 0;
+body {
+  /* background-image: linear-gradient(
+    -180deg,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  ); */
+  background-color: black;
+  font-family: "poppins", sans-serif;
+
+  /* font-family: "Kumbh Sans", sans-serif; */
+
+  padding: 0;
 }
 
-.faq { 
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 50px 25px;
-    margin: 150px 5% 5% 5%;
-    min-width: 320px;
-    max-width: 320px;
+.body-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.sidebar {
+  font-size: 16px;
+  position: relative;
+  width: 240px;
+  left: -240px;
+  height: 100vh;
+  background: #1e1e1e;
+  opacity: 0.85;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.sidebar > a.active,
+.sidebar > a:hover {
+  border-left: 5px solid rgb(26, 173, 231);
+  color: rgb(26, 173, 231);
+}
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-scroll {
+  position: fixed;
+  z-index: 80000;
+  animation: opacityo 2s linear infinite;
+  opacity: 1;
+  animation-delay: 3s;
+  animation-fill-mode: none;
+}
+
+@keyframes opacityo {
+  0%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 860px) {
+  .sidebar {
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,
+  #btn,
+  #cancel {
+    display: none;
+  }
+  span {
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a {
+    height: 60px;
+  }
+  .sidebar a i {
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .faq__question {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.faq {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 50px 25px;
+  margin: 150px 5% 5% 5%;
+  min-width: 320px;
+  max-width: 320px;
 }
 
 .faq__logo {
-    background: url('https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-mobile.svg') center bottom no-repeat;
-    background-color: transparent;
-    margin: 0 auto;
-    max-width: 300px;
-    padding: 0;
-    margin-top: -157px;
+  background: url("https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-mobile.svg")
+    center bottom no-repeat;
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 0;
+  margin-top: -157px;
 }
 
 .faq__logo__image {
-    margin-left: -13px;
-    margin-bottom: 13px;
+  margin-left: -13px;
+  margin-bottom: 13px;
 }
 
-.faq__heading { 
-    color: hsl(238, 29%, 16%);
-    font-size: 3.2rem;
-    font-weight: 700;
-    text-align: center; 
+.faq__heading {
+  font-family: "Bad-mofo";
+  color: hsl(238, 29%, 16%);
+  font-size: 5.2rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .faq__detail {
-    border-bottom: 1px solid hsl(240, 5%, 91%);
-    margin: 20px 0 0 0;
-    padding: 5px 0 20px 0;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  margin: 20px 0 0 0;
+  padding: 5px 0 20px 0;
 }
 
 .faq__summary:hover,
-.faq__summary:active { 
-    color: hsl(14, 88%, 65%);
-    cursor: pointer; 
+.faq__summary:active {
+  color: rgba(26, 173, 231);
+  cursor: pointer;
 }
 
-.faq__detail[open] > .faq__summary { 
-    font-weight: 700; 
+.faq__detail[open] > .faq__summary {
+  font-weight: 700;
 }
 
 .faq__summary {
-    list-style: none;
-  }
+  list-style: none;
+}
 
 .faq__summary::-webkit-details-marker {
-    display: none;
-  }
-
-.faq__summary { 
-    display: block;
-    padding: 0;
-    position: relative;
-    text-align: right;
-}
-
-    
-.faq__summary:after {
-    display: inline-block;
-    content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
-    background-repeat: no-repeat;
-    background-position: right center;
-    text-align: right;
-    padding-bottom: 20px;
-  }
-  
-details[open] .faq__summary:after {
-    display: inline-block;
-    width: 18px;
-    height: 10px;
-    content: "";
-    background-image: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
-    background-repeat: no-repeat;
-    background-position: center right;
-    transform:scaleY(-1);
-}
-  
-
-.faq__question {
-    left: 0;
-    position: absolute;
-    text-align: left;
-    top: 0;
-    width: 90%;
-}
-
-.faq__question {
-    display: inline-block;
-    margin: 5px 0;
-    text-align: left;
-    width: 90%;
+  display: none;
 }
 
 .faq__summary {
-    color: hsl(238, 29%, 16%);
-    font-size: 1.4rem; 
+  display: block;
+  padding: 0;
+  position: relative;
+  text-align: right;
+}
+
+.faq__summary:after {
+  display: inline-block;
+  content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+details[open] .faq__summary:after {
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  content: "";
+  background-image: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  transform: scaleY(-1);
+}
+
+.faq__question {
+  left: 0;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: 90%;
+}
+
+.faq__question {
+  display: inline-block;
+  margin: 5px 0;
+  text-align: left;
+  width: 90%;
+}
+
+.faq__summary {
+  color: hsl(238, 29%, 16%);
+  font-size: 1.4rem;
 }
 
 .faq__summary:focus {
-    color: hsl(14, 88%, 65%); 
-    font-weight: bold;
-    outline: none;
+  color: rgba(26, 173, 231);
+  font-weight: bold;
+  outline: none;
 }
 
 .faq__text {
-    color: hsl(240, 6%, 50%);
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 10px 0 0 0;
+  color: hsl(240, 6%, 50%);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 0 0 0;
 }
 
-.hidden-lg { display: block; }
-    
-.visible-lg { display: none; }
+.hidden-lg {
+  display: block;
+}
 
+.visible-lg {
+  display: none;
+}
 
-@media (min-width: 900px) {
-    .faq {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        min-width: 900px;
-        padding: 0;
-        margin: 0;
-    }
+@media (min-width: 860px) {
+  .faq {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-width: 900px;
+    padding: 0;
+    margin: 0;
+  }
 
-    .faq__logo__holder { 
-        display: flex;
-        align-items: center;
-        height: 100%;
-        justify-content: center;
-    }
+  .faq__logo__holder {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
 
-    .faq__holder {
-        margin: 0 50px;
-        padding: 70px 0;
-        max-width: 350px;
-        width: 350px;
-    }
+  .faq__holder {
+    margin: 0 50px;
+    padding: 70px 0;
+    max-width: 350px;
+    width: 350px;
+  }
 
-    .faq__logo {
-        display: flex;
-        align-items: center;
-        background-image: url(https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-desktop.svg), url(https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-desktop.svg);
-        background-position: -75px center, -571px -270px;
-        background-size: 100%, 200%;
-        height: 100%;
-        min-width: 300px;
-        margin: 0;
-        padding: 0;
-        width: 525px;
-        max-width: 500px;
-        position: relative;
-    }
+  .faq__logo {
+    display: flex;
+    align-items: center;
+    background-image: url(https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-desktop.svg),
+      url(https://bobmatyas.github.io/fm-faq-accordion/images/bg-pattern-desktop.svg);
+    background-position: -75px center, -571px -270px;
+    background-size: 100%, 200%;
+    height: 100%;
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+    width: 525px;
+    max-width: 500px;
+    position: relative;
+  }
 
-    .faq__heading {
-        text-align: left;
-    }
+  .faq__heading {
+    text-align: left;
+  }
 
-    .hidden-lg { display: none; }
+  .hidden-lg {
+    display: none;
+  }
 
-    .visible-lg { 
-        display: block; 
-        position: absolute;
-        margin-top: 120px;
-        left: -80px;    
-    }
+  .visible-lg {
+    display: block;
+    position: absolute;
+    margin-top: 120px;
+    left: -80px;
+  }
 
-    .faq__text {
-        margin: 0 0 10px 0;
-    }
+  .faq__text {
+    margin: 0 0 10px 0;
+  }
 
-    .faq__detail {
-        margin: 10px 0 0 0 0;
-        padding: 0;
-    }
+  .faq__detail {
+    margin: 10px 0 0 0 0;
+    padding: 0;
+  }
+}
+
+/*particles-js*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
 }

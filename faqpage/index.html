@@ -1,56 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>FAQ</title>
-</head>
-<body>
-    <main class="faq">
+  </head>
+  <body>
+    <div class="nav-scroll" id="nav-scroll">
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header>Explore</header>
+        <a href="../index.html">
+          <i class="fas fa-rocket"></i>
+          <span>Homepage</span>
+        </a>
+        <a href="../RegisterLogin/">
+          <i class="fas fa-user"></i>
+          <span>Onboard</span>
+        </a>
 
-        <div class="faq__logo__holder">
-        <div class="faq__logo">
-          <img src="https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-mobile.svg" alt="Faq image" class="faq__logo__image hidden-lg">
-          <img src="https://bobmatyas.github.io/fm-faq-accordion/images/illustration-box-desktop.svg" alt="faq image" class="faq__logo__image visible-lg">
-        </div>
-        </div>
-        
-        <div class="faq__holder">
-        <h1 class="faq__heading">FAQ</h1>
-       
-        <details class="faq__detail">
-            <summary  class="faq__summary"><span class="faq__question">How do I register for Essence'21 ?</span></summary>
-            <p class="faq__text">Registration can be done on -<a href="https://essencefest.netlify.app/registerlogin/"> https://essencefest.netlify.app/registerlogin </a>by filling in your personal details. Then you can register for any event by clicking on that particular event and following there.</p>
-        </details>
-      
-        <details class="faq__detail">
-          <summary  class="faq__summary"><span class="faq__question">What should I do after completing registration?</span></summary>
-          <p class="faq__text">After registering, you will get an email to verify your registration. Keep following our updates on social media and email.</p>
-        </details>  
-      
-        <details class="faq__detail">
-          <summary  class="faq__summary"><span class="faq__question">Is the entry free for all ? Who can attend ?</span></summary>
-          <p class="faq__text">Entry to Essence will be absolutely free. Only college students (and those who have passed the 12th but havent been alloted a college yet) are allowed</p>
-        </details>  
-        
-        <details class="faq__detail">
-          <summary  class="faq__summary"><span class="faq__question">Can I cancel my goodie order?</span></summary>
-          <p class="faq__text">No, If you buy a goodie once you can't cancel your order.</p>
-        </details> 
+        <a href="./index.html">
+          <i class="fas fa-tag"></i>
+          <span>Goodies</span>
+        </a>
+        <a href="./index.html" class="active">
+          <i class="fas fa-question"></i>
+          <span>FAQ's</span>
+        </a>
+        <a href="../index.html#contact_anchor">
+          <i class="far fa-envelope"></i>
+          <span>Contact</span>
+        </a>
 
-        <details class="faq__detail">
-            <summary  class="faq__summary"><span class="faq__question">Can I unregister myself from events?</span></summary>
-            <p class="faq__text">Yes, you can unregister yourself from any event you registered too.</p>
-          </details> 
-        
-        <details class="faq__detail">
-          <summary  class="faq__summary"><span class="faq__question">How can I be a part of the organizing team of Essence ?</span></summary>
-          <p class="faq__text">You can become a college ambassador for your college, and you will become the primary point of contact between your college and the Aurora'20 team. For further queries you may reach out to us <a href="https://essencefest.netlify.app/#contact_anchor"> here </a> </p>
-        </details>   
-      
+        <a title="Admin-panel" href="../admin/login.html">
+          <i class="far fa-address-card"></i>
+          <span>Admin Panel</span>
+        </a>
+
+        <a title="User-panel" href="#">
+          <i class="far fa-user-circle"></i>
+          <span>User-Panel</span>
+        </a>
       </div>
-      </main> 
-</body>
+    </div>
+    <div class="body-page">
+      <main class="faq">
+        <div class="faq__logo__holder">
+          <div class="faq__logo">
+            <img
+              src="https://bobmatyas.github.io/fm-faq-accordion/images/illustration-woman-online-mobile.svg"
+              alt="Faq image"
+              class="faq__logo__image hidden-lg"
+            />
+            <!-- <img
+            src="../assets/butter-astro.png"
+            alt="Faq image"
+            class="faq__logo__image hidden-lg"
+          /> -->
+            <img
+              src="https://bobmatyas.github.io/fm-faq-accordion/images/illustration-box-desktop.svg"
+              alt="faq image"
+              class="faq__logo__image visible-lg"
+            />
+          </div>
+        </div>
+
+        <div class="faq__holder">
+          <h1 class="faq__heading">FAQ</h1>
+
+          <details class="faq__detail">
+            <summary class="faq__summary">
+              <span class="faq__question"
+                >How do I register for Essence'21 ?</span
+              >
+            </summary>
+            <p class="faq__text">
+              Registration can be done on -<a
+                href="https://essencefest.netlify.app/registerlogin/"
+              >
+                https://essencefest.netlify.app/registerlogin </a
+              >by filling in your personal details. Then you can register for
+              any event by clicking on that particular event and following
+              there.
+            </p>
+          </details>
+
+          <details class="faq__detail">
+            <summary class="faq__summary">
+              <span class="faq__question"
+                >What should I do after completing registration?</span
+              >
+            </summary>
+            <p class="faq__text">
+              After registering, you will get an email to verify your
+              registration. Keep following our updates on social media and
+              email.
+            </p>
+          </details>
+
+          <details class="faq__detail">
+            <summary class="faq__summary">
+              <span class="faq__question"
+                >Is the entry free for all ? Who can attend ?</span
+              >
+            </summary>
+            <p class="faq__text">
+              Entry to Essence will be absolutely free. Only college students
+              (and those who have passed the 12th but havent been alloted a
+              college yet) are allowed
+            </p>
+          </details>
+
+          <details class="faq__detail">
+            <summary class="faq__summary">
+              <span class="faq__question">Can I cancel my goodie order?</span>
+            </summary>
+            <p class="faq__text">
+              No, If you buy a goodie once you can't cancel your order.
+            </p>
+          </details>
+
+          <details class="faq__detail">
+            <summary class="faq__summary">
+              <span class="faq__question"
+                >Can I unregister myself from events?</span
+              >
+            </summary>
+            <p class="faq__text">
+              Yes, you can unregister yourself from any event you registered
+              too.
+            </p>
+          </details>
+
+          <details class="faq__detail">
+            <summary class="faq__summary">
+              <span class="faq__question"
+                >How can I be a part of the organizing team of Essence ?</span
+              >
+            </summary>
+            <p class="faq__text">
+              You can become a college ambassador for your college, and you will
+              become the primary point of contact between your college and the
+              Aurora'20 team. For further queries you may reach out to us
+              <a href="https://essencefest.netlify.app/#contact_anchor">
+                here
+              </a>
+            </p>
+          </details>
+        </div>
+        <div id="particles-js"></div>
+      </main>
+    </div>
+    <!-- <div id="particles-js"></div> -->
+    <script src="../particles.js"></script>
+    <script src="../app.js"></script>
+  </body>
 </html>
