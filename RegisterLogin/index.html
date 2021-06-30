@@ -59,12 +59,12 @@
                         src="../assets/astro-jelly.jpg"
                         alt="" /></div>
                 <div class="formBx">
-                    <form action="" onsubmit="return false;">
+                     <form action="" onsubmit="return false;">
                         <h2>Sign In</h2>
-                        <input type="text" name="" placeholder="Username" required />
-                        <input type="password" name="" placeholder="Password" required />
-                        <input type="submit" name="" value="Login" id="btn"/>
-                        <p class="signup">
+                        <input type="text" class="mail" name="" placeholder="Email" required />
+                        <input type="password" class="pass" name="" placeholder="Password" required />
+                        <input type="submit" name="" value="Login" class="btn-in"/>
+                        <p class="signin">
                             Don't have an account ?
                             <a href="#" onclick="toggleForm();">Sign Up.</a>
                         </p>
@@ -75,14 +75,14 @@
                 <div class="formBx">
                     <form action="" onsubmit="return false;">
                         <h2>Create an account</h2>
-                        <input type="text" name="" placeholder="Username" required />
-                        <input type="email" name="" placeholder="Email Address" required />
-                        <input type="text" name="" placeholder="College" required />
+                        <input type="text" class="name" name="" placeholder="Username" required />
+                        <input type="email" class="mailin" name="" placeholder="Email Address" required />
+                        <input type="text" class="college" name="" placeholder="College" required />
                         <input type="tel" id="phone" name="phone" placeholder="Contact"required/>  
                         <!-- Validation of phone number left -->
-                        <input type="password" name="" placeholder="Create Password" required />
-                        <input type="password" name="" placeholder="Confirm Password" required />
-                        <input type="submit" name="" value="Sign Up" id="btn" />
+                        <input type="password" class="passin" name="" placeholder="Create Password" required />
+                        <input type="password" class="repassin" name="" placeholder="Confirm Password" required />
+                        <a href="../verification/index"><input type="submit" name="" value="Sign Up" class="btn-up" /></a>
                         <p class="signup">
                             Already have an account ?
                             <a href="#" onclick="toggleForm();">Sign in.</a>
