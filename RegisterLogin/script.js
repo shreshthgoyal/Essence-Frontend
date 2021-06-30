@@ -29,7 +29,6 @@ signInForm.addEventListener("click", (event) => {
 
   fetch(`${apiUrl}/user/login`, {
     method: "POST",
-    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
     },
