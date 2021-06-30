@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @font-face {
@@ -42,7 +42,7 @@ section .container .user .imgBx {
   position: relative;
   width: 50%;
   height: 100%;
-  background: #57A9A5;
+  background: #57a9a5;
   transition: 0.5s;
 }
 
@@ -94,7 +94,7 @@ section .container .user .formBx form input {
   font-weight: 300;
 }
 
-section .container .user .formBx form input[type='submit'] {
+section .container .user .formBx form input[type="submit"] {
   max-width: 100px;
   background: rgba(26, 173, 231);
   color: #fff;
@@ -176,134 +176,136 @@ section .container.active .signinBx .imgBx {
 }
 
 .sidebar {
-    position: fixed;
-    width: 240px;
-    left: -240px;
-    height: 100%;
-    background: #1e1e1e;
-    transition: all 0.5s ease;
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  opacity: 0.85;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.sidebar > a.active,
+.sidebar > a:hover {
+  border-left: 5px solid rgb(26, 173, 231);
+  color: rgb(26, 173, 231);
+}
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+.nav-scroll {
+  position: absolute;
+  z-index: 80000;
+  animation: opacityo 2s linear infinite;
+  opacity: 0;
+  animation-fill-mode: none;
+}
+
+@keyframes opacityo {
+  0%,
+  100% {
+    opacity: 1;
   }
-  .sidebar header {
-    font-size: 28px;
-    color: white;
-    line-height: 70px;
-    text-align: center;
-    background: #1b1b1b;
-    user-select: none;
-    font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 860px) {
+  .sidebar {
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+    bottom: 350px;
   }
-  .sidebar a {
-    display: block;
-    height: 65px;
-    width: 100%;
-    color: white;
-    line-height: 65px;
-    padding-left: 30px;
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 5px solid transparent;
-    font-family: "Open Sans", sans-serif;
-    transition: all 0.5s ease;
-    text-decoration: none;
-  }
-  .sidebar>a.active,
-  .sidebar>a:hover {
-    border-left: 5px solid #b93632;
-    color: #b93632;
-  }
-  .sidebar a i {
-    font-size: 23px;
-    margin-right: 16px;
-  }
-  .sidebar a span {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  #check {
+  header,
+  #btn,
+  #cancel {
     display: none;
   }
-  label #btn,
-  label #cancel {
+  span {
     position: absolute;
-    cursor: pointer;
-    color: white;
-    border-radius: 5px;
-    border: 1px solid #262626;
-    margin: 15px 30px;
-    font-size: 29px;
-    background: #262626;
-    height: 45px;
-    width: 45px;
-    text-align: center;
-    line-height: 45px;
-    transition: all 0.5s ease;
-  }
-  label #cancel {
+    margin-left: 23px;
     opacity: 0;
     visibility: hidden;
   }
-  #check:checked ~ .sidebar {
-    left: 0;
+  .sidebar a {
+    height: 60px;
   }
-  #check:checked ~ label #btn {
-    margin-left: 245px;
-    opacity: 0;
-    visibility: hidden;
+  .sidebar a i {
+    margin-left: -10px;
   }
-  #check:checked ~ label #cancel {
-    margin-left: 245px;
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span {
     opacity: 1;
     visibility: visible;
   }
-  .nav-scroll {
-    position: absolute;
-    z-index: 80000;
-    animation: opacityo 2s linear infinite;
-    opacity: 0; 
-    animation-fill-mode:none;
-  }
-  
-  @keyframes opacityo {
-    0%, 100% {
-      opacity: 1;
-    }
-  }
-  
-  @media (max-width: 860px) {
-    .sidebar {
-      height: auto;
-      width: 70px;
-      left: 0;
-      margin: 100px 0;
-      bottom: 350px;
-    }
-    header,
-    #btn,
-    #cancel {
-      display: none;
-    }
-    span {
-      position: absolute;
-      margin-left: 23px;
-      opacity: 0;
-      visibility: hidden;
-    }
-    .sidebar a {
-      height: 60px;
-    }
-    .sidebar a i {
-      margin-left: -10px;
-    }
-    a:hover {
-      width: 200px;
-      background: inherit;
-    }
-    .sidebar a:hover span {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+}
 
 #particles-js {
   position: fixed;
