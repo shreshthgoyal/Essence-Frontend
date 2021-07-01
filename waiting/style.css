@@ -6,7 +6,8 @@
 	 font-family: "Baloo Thambi 2", cursive;
 }
  body {
-	 background-color: #171717;
+	 /* background-color: #171717; */
+	 background-color: black;
 	 display: flex;
 	 flex-direction: column;
 	 justify-content: center;
@@ -20,10 +21,10 @@
 	 box-shadow: 20px 20px 60px #fff, -20px -20px 60px #1c1c1c;
 }
  .player__poster img {
-	 max-height: 300px;
+	 max-height: 370px;
 	 width: 100%;
 	 border-radius: 30px 30px 0 0;
-	 filter: contrast(60%);
+	 /* filter: contrast(60%); */
 }
  .player__info {
 	 margin: 8px;
@@ -95,3 +96,13 @@
 .line {
     text-align: center;
 }
+
+/*particles-js*/
+#particles-js {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -2;
+  }

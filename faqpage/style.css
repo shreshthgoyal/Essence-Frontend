@@ -270,7 +270,7 @@ details[open] .faq__summary:after {
 
 .faq__question {
   display: inline-block;
-  margin: 5px 0;
+  margin: 0px 0;
   text-align: left;
   width: 90%;
 }

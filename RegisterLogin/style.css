@@ -121,6 +121,12 @@ section .container .user .formBx form .signup a {
   color: #677eff;
 }
 
+section .container .user .formBx form .signin a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+
 section .container .signupBx {
   pointer-events: none;
 }
@@ -181,6 +187,7 @@ section .container.active .signinBx .imgBx {
   left: -240px;
   height: 100%;
   background: #1e1e1e;
+  opacity: 0.85;
   transition: all 0.5s ease;
 }
 .sidebar header {
@@ -189,7 +196,6 @@ section .container.active .signinBx .imgBx {
   line-height: 70px;
   text-align: center;
   background: #1b1b1b;
-  opacity: 0.85;
   user-select: none;
   font-family: "Montserrat", sans-serif;
 }
