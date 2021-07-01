@@ -1,5 +1,6 @@
 const div = document.querySelector(".div");
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
+const token = localStorage.getItem("cookie");
 
 const dashboard = (array) => {
 
@@ -27,6 +28,8 @@ const dashboard = (array) => {
     });
   };
 
+
+  if(token){
 fetch(`${apiUrl}/user/dashboard`,
     {
       method: "GET",
@@ -43,4 +46,12 @@ fetch(`${apiUrl}/user/dashboard`,
       .catch((err) => {
         console.log(err);
       })
+    }
+
+    else
+    {
+      location.href = "https://essencefest.netlify.app/";
+      alert("Please sign in first");
+    }
+
   
