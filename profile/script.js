@@ -30,6 +30,7 @@ const dashboard = (array) => {
 
 
   if(token){
+      console.log("dsds")
 fetch(`${apiUrl}/user/dashboard`,
     {
       method: "GET",
