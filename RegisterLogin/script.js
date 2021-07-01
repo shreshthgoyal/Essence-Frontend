@@ -41,10 +41,15 @@ signInForm.addEventListener("click", (event) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
+    
+      const token = data.token;
+  
       if (data.error)
       alert(data.error);
      
-      else{
+      else if(token)
+      {
+      localStorage.setItem("cookie", token);
       alert(data.message);
       location.href = "https://essencefest.netlify.app/";}
     })
