@@ -29,6 +29,10 @@ signInForm.addEventListener("click", (event) => {
 
   fetch(`${apiUrl}/user/login`, {
     method: "POST",
+    crossDomain: true,
+    xhrFields: {
+       withCredentials: true
+               },
     headers: {
       "Content-Type": "application/json",
     },
