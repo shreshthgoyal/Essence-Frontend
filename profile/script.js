@@ -37,7 +37,7 @@ fetch(`${apiUrl}/user/dashboard`,
         "Content-Type": "application/json",
       },
     })
-      .then((res) => res.json())
+      .then((res) => console.log(res.json()))
       .then((data) => {
         console.log(data.data);
         const user = data.data;
