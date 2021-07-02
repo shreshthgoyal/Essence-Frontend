@@ -36,6 +36,7 @@ fetch(`${apiUrl}/user/dashboard`,
         "Content-Type": "application/json",
         "Authorization": token,
       },
+    { credentials: 'same-origin' }
     })
       .then((res) => res.json())
       .then((data) => {
