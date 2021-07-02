@@ -13,7 +13,7 @@ const toggleForm = () => {
     }
   }
 
-const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
+const apiUrl = "http://localhost:5000";
 
 const signInForm = document.querySelector(".btn-in");
 
@@ -37,11 +37,11 @@ signInForm.addEventListener("click", (event) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email, password }),
-  })
+  }) 
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
-    
+
       const token = data.token;
   
       if (data.error)
@@ -49,9 +49,9 @@ signInForm.addEventListener("click", (event) => {
      
       else if(token)
       {
-      localStorage.setItem("cookie", token);
       alert(data.message);
-      location.href = "https://essencefest.netlify.app/";}
+      }
+
     })
     .catch((err) => {
       alert("Error Signing In");
