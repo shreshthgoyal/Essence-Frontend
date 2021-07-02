@@ -34,6 +34,7 @@ fetch(`${apiUrl}/user/dashboard`,
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `${localStorage.getItem("cookie")}`,
       },
       credentials: 'include',
     })
