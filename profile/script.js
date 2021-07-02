@@ -34,17 +34,16 @@ fetch(`${apiUrl}/user/dashboard`,
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `${localStorage.getItem("cookies")}`,
+        "Authorization": token,
       },
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data);
         const user = data.data;
         dashboard(user);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err)
       })
     }
 
