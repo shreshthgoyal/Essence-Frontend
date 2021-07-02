@@ -34,7 +34,6 @@ fetch(`${apiUrl}/user/dashboard`,
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": token,
       },
       credentials: 'include',
     })
