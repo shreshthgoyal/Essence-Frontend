@@ -1,11 +1,11 @@
 const div = document.querySelector(".div");
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
+
 const token = localStorage.getItem("cookie");
 
 const dashboard = (array) => {
-
     div.innerHTML = "";
-  
+    
     array.forEach((info) => {
       const { name, college, contact } = info;
   
@@ -28,19 +28,19 @@ const dashboard = (array) => {
     });
   };
 
-
   if(token){
 fetch(`${apiUrl}/user/dashboard`,
     {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `${localStorage.getItem("cookies")}`,
       },
     })
-      .then((res) => console.log(res.json()))
+      .then((res) => res.json())
       .then((data) => {
-        console.log(data.data);
-        const user = data.data;
+        console.log(data);
+        const user = data[0].data;
         dashboard(user);
       })
       .catch((err) => {
@@ -53,5 +53,3 @@ fetch(`${apiUrl}/user/dashboard`,
       location.href = "https://essencefest.netlify.app/";
       alert("Please sign in first");
     }
-
-  
