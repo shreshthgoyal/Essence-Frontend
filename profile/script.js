@@ -39,8 +39,8 @@ fetch(`${apiUrl}/user/dashboard`,
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        const user = data[0].data;
+        console.log(data.data);
+        const user = data.data;
         dashboard(user);
       })
       .catch((err) => {
