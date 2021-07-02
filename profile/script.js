@@ -37,7 +37,6 @@ fetch(`${apiUrl}/user/dashboard`,
         "Authorization": token,
       },
       credentials: 'include',
-      origin: "https://essencefest.netlify.app"
     })
       .then((res) => res.json())
       .then((data) => {
