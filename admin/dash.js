@@ -1,12 +1,9 @@
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
-const unique = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpmdW40NDg3QGdtYWlsLmNvbSIsImlhdCI6MTYyNTE4MjcxM30.zA8yOZAwYUd5BeyG7kivaZCY4PaMwKvxJ1Vup-DYOMQ";
-
-localStorage.setItem("cookie", unique);
-
 const token = localStorage.getItem("cookie");
 
 const table = document.querySelector(".userinfo");
+const count = document.querySelector(".count");
 
 
 let info = [];
@@ -15,7 +12,7 @@ const admintable = (array) => {
   table.innerHTML = "";
 
   array.forEach((data) => {
-    const { name,  email, contact} = data;
+    const { name,  email, contact, college} = data;
 
     const row = document.createElement("tr");
   
@@ -44,6 +41,9 @@ if (token) {
       .then((data) => {
         info = data.data;
         admintable(data.data);
+
+       count.innerHTML=`Users registered to fest is <b>${info.length}</b>`;
+
 
       })
       .catch((err) => {
