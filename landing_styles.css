@@ -962,7 +962,6 @@ nav a:hover {
 
 /* footer */
 footer {
-  position: absolute;
   background-image: url("./assets/footerbg.gif");
   background-repeat: no-repeat;
   background-size: cover;
