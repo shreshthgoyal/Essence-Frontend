@@ -40,8 +40,6 @@ signInForm.addEventListener("click", (event) => {
   }) 
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
-
       const token = data.token;
   
       if (data.error)
@@ -50,6 +48,8 @@ signInForm.addEventListener("click", (event) => {
       else if(token)
       {
       alert(data.message);
+      localStorage.setItem("token", token);
+      location.href = "../index.html";
       }
 
     })
