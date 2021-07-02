@@ -48,7 +48,7 @@ signInForm.addEventListener("click", (event) => {
       else if(token)
       {
       alert(data.message);
-      localStorage.setItem("token", token);
+      localStorage.setItem("cookie", token);
       location.href = "../index.html";
       }
 
