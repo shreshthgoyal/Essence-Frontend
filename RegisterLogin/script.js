@@ -35,6 +35,7 @@ signInForm.addEventListener("click", (event) => {
                },
     headers: {
       "Content-Type": "application/json",
+      "Authorization": token,
     },
     body: JSON.stringify({ email, password }),
   }) 
