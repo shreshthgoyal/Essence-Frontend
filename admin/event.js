@@ -70,11 +70,7 @@ if (token) {
         console.log(err);
       })
   }
-const logout = document.getElementsByClassName("logout");
 
-logout.addEventListener("click", 
-  localStorage.removeItem("cookie")
-  )
   if (!token) {
     location.href = "../../index.html";
    }
