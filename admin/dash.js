@@ -51,6 +51,12 @@ if (token) {
       })
   }
 
+const logout = document.querySelector(".logout");
+
+logout.addEventListener("click", 
+  localStorage.removeItem("cookie")
+  )
+
   if (!token) {
     location.href = "../../index.html";
    }
