@@ -42,7 +42,7 @@ if (token) {
         info = data.data;
         admintable(data.data);
 
-       count.innerHTML=`Users registered to fest is <b>${info.length}</b>`;
+       count.innerHTML=`Users registered to fest are <b>${info.length}</b>`;
 
 
       })
