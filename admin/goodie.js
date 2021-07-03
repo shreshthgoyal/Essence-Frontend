@@ -69,7 +69,7 @@ if (token) {
       })
   }
 
-const logout = document.querySelector(".logout");
+const logout = document.getElementsByClassName("logout");
 
 logout.addEventListener("click", 
   localStorage.removeItem("cookie")
