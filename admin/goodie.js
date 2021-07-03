@@ -1,6 +1,6 @@
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
-
 const token = localStorage.getItem("cookie");
+const count = document.querySelector(".count");
 
 const table = document.querySelector(".goodieinfo");
 
@@ -23,6 +23,30 @@ const admintable = (array) => {
   });
 };
 
+const goodie = (array) => {
+  if (array.length == 0) return null;
+  var modeMap = {},
+    maxCount = 1,
+    modes = [];
+
+  for (var i = 0; i < array.length; i++) {
+    const {goodie} = array[i];
+    var el = goodie;
+
+    if (modeMap[el] == null) modeMap[el] = 1;
+    else modeMap[el]++;
+
+    if (modeMap[el] > maxCount) {
+      modes = [el];
+      maxCount = modeMap[el];
+    } else if (modeMap[el] == maxCount) {
+      modes.push(el);
+      maxCount = modeMap[el];
+    }
+  }
+  return modes;
+}
+
 admintable(info);
 
 if (token) {
@@ -37,7 +61,7 @@ if (token) {
       .then((res) => res.json())
       .then((data) => {
         info = data.data;
-        console.log(data)
+       count.innerHTML=`Most popular goodie is <b>${goodie(data.data)}</b>`;
         admintable(data.data);
       })
       .catch((err) => {
