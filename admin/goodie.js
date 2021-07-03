@@ -1,9 +1,5 @@
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
-const unique = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpmdW40NDg3QGdtYWlsLmNvbSIsImlhdCI6MTYyNTE4MjcxM30.zA8yOZAwYUd5BeyG7kivaZCY4PaMwKvxJ1Vup-DYOMQ";
-
-localStorage.setItem("cookie", unique);
-
 const token = localStorage.getItem("cookie");
 
 const table = document.querySelector(".goodieinfo");
