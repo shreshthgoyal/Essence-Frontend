@@ -51,7 +51,7 @@ body {
   border-radius: 10px;
   width: 45%;
   flex: none;
-  background-image: url("https://40.media.tumblr.com/825bc0bba2584019a32dd3e3c924acc4/tumblr_npcpixeoob1txygfho1_500.jpg");
+  background-image: url("http://40.media.tumblr.com/825bc0bba2584019a32dd3e3c924acc4/tumblr_npcpixeoob1txygfho1_500.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -106,24 +106,17 @@ h1.first-name {
 
 .statistics {
   margin-right: 10px;
-  margin-left: 10px;
+  margin-left: 80px;
   line-height: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.statistics p {
+.statistics .popup {
   margin: 3%;
   flex: auto;
   color: #0F0F0F;
-}
-
-.statistics p strong {
-  font-size: 1.4rem;
-  color: #000;
-  font-weight: 200;
-  margin-right: 0.3rem;
 }
 
 .icon {
@@ -143,7 +136,6 @@ h1.first-name {
 
 .arrow {
   flex: 0 1 75px;
-  background-image: url("https://zephyo.github.io/22Days/code/3/graphics/arrow.svg");
 }
 
 .right {
@@ -155,7 +147,6 @@ h1.first-name {
 }
 
 .close {
-  background-image: url("https://zephyo.github.io/22Days/code/3/graphics/close.svg");
   position: absolute;
   top: 5px;
   right: 10px;
@@ -179,6 +170,7 @@ h1.first-name {
   }
   h1.first-name {
     left: 10px;
+    color: #0F0F0F;
   }
 }
 
@@ -232,4 +224,58 @@ h1.first-name {
      transform: translateX(0px);
     opacity: 1;
   }
+}
+
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }
