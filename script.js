@@ -81,3 +81,37 @@ previousArrow.onclick = function () {
   index -= 1;
   showSlides(index);
 };
+
+
+//User profile
+
+var element = document.querySelector(".profile");
+
+const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
+
+const token = localStorage.getItem("cookie");
+
+if (token) {
+  fetch(`${apiUrl}/user/dashboard`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": token,
+      },
+      credentials: 'same-origin'
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      element.innerHTML= `<i class="fas fa-user-astronaut"></i> ${data.data[0].name}`;
+      element.classList.add("show");
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+}
+
+if(!token){
+  element.innerHTML = "";
+  element.classList.remove("show");
+}
