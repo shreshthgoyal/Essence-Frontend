@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family: "Boiling";
   src: url("./assets/fonts/BoilingBlackDemo-jEReR.ttf");
@@ -488,6 +489,17 @@ nav a {
 nav a:hover {
   color: rgba(26, 173, 231);
   transform: scale(1.1);
+}
+
+.profile {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* 
