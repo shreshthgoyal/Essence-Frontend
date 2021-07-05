@@ -39,7 +39,7 @@ admin.addEventListener("click", (event) => {
      
       else if(token)
       {
-      localStorage.setItem("cookie", token);
+      localStorage.setItem("admin", token);
       Swal.fire({
         icon: 'success',
         title: `${data.message}`,
