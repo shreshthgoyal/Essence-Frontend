@@ -366,6 +366,18 @@ p {
   }
 }
 
+.popup .buttons{
+  display:flex;
+  justify-content:space-around;
+  margin-top:2rem;
+}
+button{
+  padding:10px;
+  background:black;
+  color:white;
+  cursor : pointer;
+}
+
 @media screen and (min-aspect-ratio: 4/3) {
   body {
     background-size: cover;
