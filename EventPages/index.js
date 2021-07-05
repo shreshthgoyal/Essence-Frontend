@@ -1,4 +1,5 @@
 var nav = document.getElementById("nav-scroll");
+const back = document.querySelector(".back");
 
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
@@ -8,6 +9,10 @@ window.onscroll = function () {
     nav.style.display = "initial";
   }
 };
+
+back.addEventListener("click", ()=>{
+  window.history.back();
+})
 
 function Envelope() {
   this.envelopeBack = document.querySelector(".envelope-back");
@@ -42,3 +47,4 @@ function Envelope() {
 }
 
 const envelope = new Envelope();
+
