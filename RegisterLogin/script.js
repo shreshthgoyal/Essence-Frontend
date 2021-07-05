@@ -43,13 +43,16 @@ signInForm.addEventListener("click", (event) => {
       const token = data.token;
   
       if (data.error)
-      alert(data.error);
-     
+      {Swal.fire({
+        icon: 'warning',
+        title: 'Warning!',
+        text: `${data.error}`,
+      })
+    }
       else if(token)
       {
-      alert(data.message);
       localStorage.setItem("cookie", token);
-      location.href = "../index.html";
+      location.href = "../profile";
       }
 
     })
@@ -71,7 +74,11 @@ signUpForm.addEventListener("click", (event) => {
   const retypedPassword = document.querySelector(".repassin").value;
 
   if (password !== retypedPassword) {
-    alert("Passwords don't match");
+    Swal.fire({
+      icon: 'warning',
+      title: 'Warning!',
+      text: 'Passwords do not match. Try again.',
+    })
     return;
   }
 
@@ -87,15 +94,26 @@ signUpForm.addEventListener("click", (event) => {
     .then((data) => {
       console.log(data);
       if (data.error)
-        alert(data.error);
+        {Swal.fire({
+          icon: 'warning',
+          title: 'Warning!',
+          text: `${data.error}`,
+        })}
 
       else {
-        alert("A verification mail sent. Please verify yourslef before logging in.")
+        Swal.fire({
+          icon: 'success',
+          title: 'Verification mail sent. Verify yourself before signing in.',
+        })
         location.href = "/waiting/index.html"
       }
     })
     .catch((err) => {
-      alert("Error Signing Up");
+      Swal.fire({
+        icon: 'warning',
+        title: 'Warning!',
+        text: 'Error Signing up, Try again.',
+      })
       console.log(err);
     });
 });
