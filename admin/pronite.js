@@ -1,6 +1,6 @@
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
-const token = localStorage.getItem("cookie");
+const token = localStorage.getItem("admin");
 const count = document.querySelector(".count");
 
 const table = document.querySelector(".proniteinfo");
@@ -73,7 +73,7 @@ if (token) {
   const logout = document.getElementById("log");
 
 logout.addEventListener("click", 
- () => { localStorage.removeItem("cookie")}
+ () => { localStorage.removeItem("admin")}
   )
 
   if (!token) {
