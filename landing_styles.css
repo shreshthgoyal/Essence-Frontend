@@ -30,7 +30,7 @@ body {
 /* bg-video */
 
 .well {
-  max-height: 100vh;
+  min-height: 100vh;
 
   /* overflow: scroll; */
   /* overflow-x: hidden; */
