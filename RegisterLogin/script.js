@@ -20,7 +20,7 @@ const signInForm = document.querySelector(".btn-in");
 const token = localStorage.getItem("cookie");
 
 if(token) {
-  location.href = "./profile"
+  location.href = "/profile"
 }
 
 signInForm.addEventListener("click", (event) => {
