@@ -30,18 +30,30 @@ admin.addEventListener("click", (event) => {
       const token = data.token;
   
       if (data.error)
-      alert(data.error);
+      {Swal.fire({
+        icon: 'warning',
+        title: 'Warning!',
+        text: `${data.error}`,
+      })
+      }
      
       else if(token)
       {
       localStorage.setItem("cookie", token);
-      alert(data.message);
+      Swal.fire({
+        icon: 'success',
+        title: `${data.message}`,
+      })
       location.href = "https://essencefest.netlify.app/admin/dashboard";
       }
 
     })
     .catch((err) => {
-      alert("Error Signing In");
+      Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        text: `Error Signing In`,
+      })
       console.log(err);
     });
 });
