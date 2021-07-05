@@ -38,6 +38,21 @@ body {
   font-weight: 400;
 }
 
+.back {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: whitesmoke;
+}
+
 .sidebar {
   font-size: 16px;
   position: relative;
