@@ -46,11 +46,6 @@ for (j = 1; j <= 6; j++) {
 
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
-const unique =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN5bGF0cG1jOHhAYnV5LWJsb2cuY29tIiwiaWF0IjoxNjI1Mzg2MTI2fQ.1e8AujLUg4-IrliEq7Jr1Z88bioaYVVfQ8y95fkzIb8";
-
-localStorage.setItem("cookie", unique);
-
 const token = localStorage.getItem("cookie");
 
 const url = window.location.href;
