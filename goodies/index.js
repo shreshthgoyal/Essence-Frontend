@@ -14,6 +14,13 @@ document.body.onscroll = function () {
   }
 };
 
+let back = document.querySelector(".back");
+
+back.addEventListener("click", ()=>{
+  console.log("Ds")
+    window.history.back();
+  })
+
 var i;
 
 function buyAnimate(i) {
