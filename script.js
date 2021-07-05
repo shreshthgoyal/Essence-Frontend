@@ -87,6 +87,12 @@ previousArrow.onclick = function () {
 
 var element = document.querySelector(".profile");
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
+
+const unique =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN5bGF0cG1jOHhAYnV5LWJsb2cuY29tIiwiaWF0IjoxNjI1Mzg2MTI2fQ.1e8AujLUg4-IrliEq7Jr1Z88bioaYVVfQ8y95fkzIb8";
+
+localStorage.setItem("cookie", unique);
+
 const token = localStorage.getItem("cookie");
 
 var admin = document.querySelector(".admin");
@@ -118,6 +124,67 @@ if (token) {
       console.log(err)
     })
 }
+
+const proniteRegister = [];
+const proniteid = [];
+
+var j;
+
+for (j = 1; j <= 4; j++) {
+  proniteRegister[j] = document.querySelector(".pro" + j);
+}
+
+// const apixUrl = "http://localhost:5000";
+
+// const tokenx = localStorage.getItem("cookie");
+
+const url = window.location.href;
+
+var k;
+
+function pro_reg(k) {
+  const registerPronite = (route, fetch_method) => {
+    fetch(`${apiUrl}/pronites/${route}/${k}`, {
+      method: `${fetch_method}`,
+      crossDomain: true,
+      xhrFields: {
+        withCredentials: true,
+      },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: token,
+      },
+    }).then((res) => {
+      const status = res.status;
+      res.json().then((data) => {
+        if (data.error) {
+          alert(data.error);
+        } else {
+          alert(data.message);
+        }
+
+        if (status === 401) {
+          location.href = "./RegisterLogin/";
+        } else {
+          location.href = url;
+        }
+      });
+    });
+  };
+
+  proniteRegister[k].addEventListener("click", (event) => {
+    event.preventDefault();
+    const route = "proniteRegn";
+    const fetch_method = "POST";
+
+    registerPronite(route, fetch_method);
+  });
+}
+
+for (k = 1; k <= 4; k++) {
+  pro_reg(k);
+}
+
 
 // if (!token) {
 //   element.innerHTML = "";
