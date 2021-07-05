@@ -6,6 +6,12 @@ const list = document.getElementById("myPopup1")
 const token = localStorage.getItem("cookie");
 
 const logoutButton = document.querySelector(".logout-button");
+let back = document.querySelector(".back");
+
+back.addEventListener("click", ()=>{
+  console.log("Ds")
+    window.history.back();
+  })
 
 const dashboard = (array) => {
   div.innerHTML = "";
