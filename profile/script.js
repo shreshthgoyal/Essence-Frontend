@@ -141,8 +141,7 @@ if (token) {
 }
 
 if (!token) {
-  location.href = "https://essencefest.netlify.app/";
-  alert("Please sign in first");
+  location.href = "/RegisterLogin";
 }
 
 function myFunction1() {
