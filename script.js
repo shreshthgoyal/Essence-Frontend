@@ -123,3 +123,33 @@ if (!token) {
   element.innerHTML = "";
   button.classList.remove("show");
 }
+
+// backtoTop
+
+const backToTopButton = document.getElementById("back-to-top-btn");
+
+window.addEventListener("scroll", scrollFunction);
+document.body.addEventListener("touchmove", scrollFunction);
+
+function scrollFunction() {
+  if (window.scrollY > 300) { 
+    
+    if(!backToTopButton.classList.contains("btnEntrance")) {
+     
+      backToTopButton.classList.remove("btnExit");
+      backToTopButton.classList.add("btnEntrance");
+      backToTopButton.style.display = "block";
+      
+    }
+  }
+  else {
+    if(backToTopButton.classList.contains("btnEntrance")) {
+      
+      backToTopButton.classList.remove("btnEntrance");
+      backToTopButton.classList.add("btnExit");
+      setTimeout(function() {
+        backToTopButton.style.display = "none";
+      }, 250);
+    }
+  }
+}
