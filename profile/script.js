@@ -5,6 +5,8 @@ const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 const list = document.getElementById("myPopup1")
 const token = localStorage.getItem("cookie");
 
+const logoutButton = document.querySelector(".logout-button");
+
 const dashboard = (array) => {
   div.innerHTML = "";
 
@@ -149,3 +151,9 @@ function myFunction3() {
   var popup = document.getElementById("myPopup3");
   popup.classList.toggle("show");
 }
+
+logoutButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("cookie");
+  location.href = "../";
+})
