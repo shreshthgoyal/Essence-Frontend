@@ -25,6 +25,8 @@ body {
   width: 100%;
 }
 
+
+
 /*sidebar*/
 .sidebar {
   position: fixed;
@@ -173,6 +175,21 @@ label #cancel {
   transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   background-color: rgba(255, 255, 255, 0.2);
   z-index: 2000;
+}
+
+.back {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: black;
 }
 
 .heading {
@@ -345,7 +362,6 @@ label #cancel {
 .box-content .price:after {
   right: -50px;
 }
-
 /*particles-js*/
 #particles-js {
   position: fixed;
