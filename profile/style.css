@@ -33,6 +33,22 @@ body {
   background: white;
 }
 
+.back {
+  position: fixed;
+  top: 2%;
+  right: 5%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: whitesmoke;
+}
+
+
 .profile {
   animation: loadProfile 0.6s ease-in-out;
   animation-fill-mode: both;
