@@ -17,6 +17,12 @@ const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
 const signInForm = document.querySelector(".btn-in");
 
+const token = localStorage.getItem("cookie");
+
+if(token) {
+  location.href = "./profile"
+}
+
 signInForm.addEventListener("click", (event) => {
 
   event.preventDefault();
