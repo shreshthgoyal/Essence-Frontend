@@ -67,6 +67,24 @@ p {
   margin: 0px;
 }
 
+.back {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  animation: opacityo 2s linear infinite;
+  animation-delay: 3s;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: black;
+}
+
 .profile-card {
   background: #fff;
   width: 56px;
@@ -437,7 +455,7 @@ a {
   border-radius: 5px;
   width: 70%;
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: all 5s ease-in-back;
   overflow-y: auto;
 }
 
@@ -620,9 +638,8 @@ label #cancel {
   position: absolute;
   z-index: 80000;
   animation: opacityo 2s linear infinite;
-  opacity: 0;
   animation-delay: 3s;
-  animation-fill-mode: none;
+  opacity: 0;
 }
 
 @keyframes opacityo {
@@ -800,7 +817,7 @@ label #cancel {
   color: white;
   font-size: 20px;
   position: absolute;
-  outline: none;
+  backline: none;
   top: -10px;
   right: -5px;
 }
