@@ -119,10 +119,10 @@ if (token) {
     })
 }
 
-if (!token) {
-  element.innerHTML = "";
-  button.classList.remove("show");
-}
+// if (!token) {
+//   element.innerHTML = "";
+//   button.classList.remove("show");
+// }
 
 // backtoTop
 
