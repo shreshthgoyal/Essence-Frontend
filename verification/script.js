@@ -20,11 +20,50 @@ fetch(`${apiUrl}/user/verify/${token}`, {
     .then((res) =>
         (res.json()))
     .then((data) => {
-        if (data.error)
-            alert(data.error);
+        if (data.error){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Warning!',
+            text: `${data.error}`,
+            confirmButtonText: `OK`,
+            width: 600,
+            padding: '3em',
+            background: '#fff',
+            backdrop: `
+              rgba(0,0,123,0.4)
+              url('https://media.tenor.com/images/69e6ff048ba5b05514ee8ce2e73c653d/tenor.gif')
+              right
+              no-repeat
+            `
+          })
+          .then((result) => {
+            location.href = "/RegisterLogin"
+          })
+        }
+        
+          else{
+            Swal.fire({
+                icon: 'success',
+                title: 'Welcome to Essence!',
+                text: `You have been verified!`,
+                width: 600,
+                padding: '3em',
+                background: '#fff',
+                backdrop: `
+                rgba(0,0,123,0.4)
+                url('https://media.tenor.com/images/69e6ff048ba5b05514ee8ce2e73c653d/tenor.gif')
+                right
+                no-repeat
+              `
+              })
+          }
     })
     .catch((err) => {
-        alert("Error Signing Up");
+        Swal.fire({
+            icon: 'error',
+            title: 'Warning!',
+            text: `Error Verifying`,
+          })
         console.log(err);
     });
 
