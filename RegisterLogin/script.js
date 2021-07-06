@@ -35,10 +35,6 @@ signInForm.addEventListener("click", (event) => {
 
   fetch(`${apiUrl}/user/login`, {
     method: "POST",
-    crossDomain: true,
-    xhrFields: {
-       withCredentials: true
-               },
     headers: {
       "Content-Type": "application/json",
     },
@@ -66,7 +62,7 @@ signInForm.addEventListener("click", (event) => {
        Swal.fire({
         icon: 'error',
         title: 'Error!',
-        text: `${data.error}`,
+        text: 'Error Signing In! Try again.',
       })
       console.log(err);
     });
