@@ -141,6 +141,11 @@ label #cancel {
     opacity: 1;
     visibility: visible;
   }
+
+  .icon-cards span {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .icon-cards {
