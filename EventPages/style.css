@@ -453,7 +453,7 @@ a {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
-  z-index: 999999;
+  z-index: 5;
 }
 .overlay:target {
   visibility: visible;
