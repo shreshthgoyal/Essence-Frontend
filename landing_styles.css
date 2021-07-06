@@ -1284,6 +1284,9 @@ footer {
     position: absolute;
     bottom: 3vw;
   }
+  .loader {
+    left: 30vw;
+  }
 }  
 
 a {
