@@ -48,9 +48,6 @@ const register_unregister = (route, fetch_method) => {
         if(status === 401){
             location.href = "../RegisterLogin/";
         }
-        else{
-            location.href = url;
-        }
         })
     });
 };
