@@ -129,12 +129,7 @@ for (j = 1; j <= 4; j++) {
   proniteRegister[j] = document.querySelector(".pro" + j);
 }
 
-// const apixUrl = "http://localhost:5000";
-
-// const tokenx = localStorage.getItem("cookie");
-
 const url = window.location.href;
-
 var k;
 
 function pro_reg(k) {
@@ -152,17 +147,23 @@ function pro_reg(k) {
     }).then((res) => {
       const status = res.status;
       res.json().then((data) => {
-        if (data.error) {
-          alert(data.error);
-        } else {
-          alert(data.message);
+        if (data.error) {Swal.fire({
+          icon: 'warning',
+          title: 'Warning!',
+          text: `${data.error}`,
+        })
+      }
+       else {
+        Swal.fire({
+          icon: 'success',
+          text: `${data.message}`,
+        })   
         }
 
         if (status === 401) {
           location.href = "./RegisterLogin/";
-        } else {
-          location.href = url;
         }
+
       });
     });
   };
@@ -179,12 +180,6 @@ function pro_reg(k) {
 for (k = 1; k <= 4; k++) {
   pro_reg(k);
 }
-
-
-// if (!token) {
-//   element.innerHTML = "";
-//   button.classList.remove("show");
-// }
 
 // backtoTop
 

@@ -68,17 +68,23 @@ function goodie_reg(k) {
     }).then((res) => {
       const status = res.status;
       res.json().then((data) => {
-        if (data.error) {
-          alert(data.error);
-        } else {
-          alert(data.message);
+        if (data.error) {Swal.fire({
+          icon: 'warning',
+          title: 'Warning!',
+          text: `${data.error}`,
+        })
+      }
+       else {
+        Swal.fire({
+          icon: 'success',
+          text: `${data.message}`,
+        })   
         }
 
         if (status === 401) {
           location.href = "../RegisterLogin/";
-        } else {
-          location.href = url;
         }
+        
       });
     });
   };
