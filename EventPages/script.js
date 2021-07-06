@@ -41,7 +41,7 @@ const register_unregister = (route, fetch_method) => {
         else{
             Swal.fire({
                icon: 'success',
-               text: `${data.error}`,
+               text: `${data.message}`,
              })    
         }
         
