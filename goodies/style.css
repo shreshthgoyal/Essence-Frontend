@@ -18,7 +18,7 @@ body {
   display: grid;
   height: 100%;
   place-items: center;
-  background-image: url("../assets/goodies-space.jpg");
+  background-image: url("../assets/goodies-space.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
