@@ -757,16 +757,16 @@ nav a:hover {
 }
 
 .day1-card {
-  background-image: url("./assets/blue-astro-bg.jpg");
+  background-image: url("./assets/blue-astro-bg.webp");
 }
 .day2-card {
-  background-image: url("./assets/float.jpeg");
+  background-image: url("./assets/float.webp");
 }
 .day3-card {
-  background-image: url("./assets/surf.jpg");
+  background-image: url("./assets/surf.webp");
 }
 .day4-card {
-  background-image: url("./assets/skull.jpeg");
+  background-image: url("./assets/skull.webp");
 }
 
 .front {
