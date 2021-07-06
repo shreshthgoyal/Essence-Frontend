@@ -27,6 +27,39 @@ body {
   width: 100vw;
   font-family: "poppins";
 }
+
+/* preloader */
+.loader-bg {
+  position: fixed;
+  z-index: 99999;
+  background: rgb(19, 18, 18);
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 45vh;
+  left: 45vw;
+}
+
+.loader img {
+  height: 20vh;
+  animation: loader 0.7s linear infinite alternate;
+}
+
+@keyframes loader {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-25%);
+  }
+}
+
 /* bg-video */
 
 .well {
