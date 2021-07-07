@@ -56,10 +56,14 @@ const register_unregister = (route, fetch_method) => {
         
         if (data.error){
             Swal.fire({
-                icon: 'warning',
-                title: 'Warning!',
-                text: `${data.error}`,
-              })
+          icon: 'warning',
+          title: 'Warning!',
+          text: `${data.error}`,
+          confirmButtonText: `OK`,
+        })
+        .then((result) => {
+          location.href = "/RegisterLogin"
+        })
         }
         else{
             Swal.fire({
