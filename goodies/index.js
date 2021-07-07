@@ -69,10 +69,16 @@ function goodie_reg(k) {
     }).then((res) => {
       const status = res.status;
       res.json().then((data) => {
-        if (data.error) {Swal.fire({
+        if (data.error) 
+      {
+        Swal.fire({
           icon: 'warning',
           title: 'Warning!',
-          text: `${data.error}`,
+          text: `User not Signed In`,
+          confirmButtonText: `OK`,
+        })
+        .then((result) => {
+          location.href = "/RegisterLogin"
         })
       }
        else {
