@@ -24,8 +24,8 @@ const admintable = (array) => {
     table.appendChild(row);
   });
 };
-
-const event = (array) => {
+                                                                        //Calculating the most popular event
+const event = (array) => {  
   if (array.length == 0) return null;
   var modeMap = {},
     maxCount = 1,
@@ -52,7 +52,7 @@ const event = (array) => {
 admintable(info);
 
 if (token) {
-    fetch(`${apiUrl}/admin/events`,
+    fetch(`${apiUrl}/admin/events`,                                                 //fetching all the events data by making a GET request
     {
       method: "GET",
       headers: {
@@ -63,7 +63,7 @@ if (token) {
       .then((res) => res.json())
       .then((data) => {
         info = data.data;
-       count.innerHTML=`Most popular event is <b>${event(data.data)}</b>`;
+       count.innerHTML=`Most popular event is <b>${event(data.data)}</b>`;           
        admintable(data.data);
       })
       .catch((err) => {
@@ -73,7 +73,7 @@ if (token) {
 
   const logout = document.getElementById("log");
 
-logout.addEventListener("click", 
+logout.addEventListener("click",                                                     //log out by removing the admin cookie from local storage
  () => { localStorage.removeItem("admin")}
   )
 
