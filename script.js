@@ -102,6 +102,18 @@ const token = localStorage.getItem("cookie");
 var admin = document.querySelector(".admin");
 var flag = 0;
 
+const proniteRegister = [];
+const button = [];
+
+const proniteid = [];
+
+var j;
+
+for (j = 1; j <= 4; j++) {
+  proniteRegister[j] = document.querySelector(".pro" + j);
+  button[j] = document.querySelector(".pro" + j);
+}
+
 if (token) {
   fetch(`${apiUrl}/user/dashboard`,
     {
@@ -129,22 +141,12 @@ if (token) {
     })
 }
 
-const proniteRegister = [];
-const button = [];
-const proniteid = [];
-
-var j;
-
-for (j = 1; j <= 4; j++) {
-  proniteRegister[j] = document.querySelector(".pro" + j);
-  button[j] = document.querySelector(".pro" + j);
-}
 
 const url = window.location.href;
 var k;
 
 function pro_reg(k) {
-
+if(token){
   const pronite = (route, fetch_method) => {
     fetch(`${apiUrl}/pronites/${route}/${k}`, {
       method: `${fetch_method}`,
@@ -197,11 +199,22 @@ function pro_reg(k) {
       pronite(route, fetch_method);
     }
   })
-
-
 }
 
+else
+{
+  proniteRegister[k].addEventListener("click", (event) => {
+    event.preventDefault();
+    
+    Swal.fire({
+      icon: 'warning',
+      title: 'Warning!',
+      text: `User not Signed in!`,
+    })
 
+  })
+}
+}
 
 for (k = 1; k <= 4; k++) {
   pro_reg(k);
