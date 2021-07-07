@@ -25,11 +25,11 @@ const url = window.location.href;
       .then((res) => res.json())
       .then((data) => {
         
-        (data.data).forEach(element => {
-            if(element.event === eventName){
+        for(var i = 0; i < data.data.length; i++) {
+            if(data.data[i].event === eventName){
                 regnButton.innerHTML = "Unregister";
             }
-        });
+        };
       })
       .catch((err) => {
         console.log(err)
