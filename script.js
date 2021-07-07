@@ -141,6 +141,25 @@ if (token) {
     })
 }
 
+fetch(`${apiUrl}/user/pronite`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": token,
+      },
+      credentials: 'same-origin'
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      for(var i = 0; i < data.data.length;i++)
+      {
+        button[data.data[i].id].innerHTML = "Unregister";
+      }
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 
 const url = window.location.href;
 var k;
@@ -161,6 +180,7 @@ if(token){
     }).then((res) => {
       const status = res.status;
       res.json().then((data) => {
+        console.log(data)
         if (data.error) {
           Swal.fire({
             icon: 'warning',
@@ -184,7 +204,6 @@ if(token){
   };
   proniteRegister[k].addEventListener("click", (event) => {
     event.preventDefault();
-
     if (button[k].innerText === "Register") {
       const route = "proniteRegn";
       const fetch_method = "POST";
@@ -205,13 +224,11 @@ else
 {
   proniteRegister[k].addEventListener("click", (event) => {
     event.preventDefault();
-    
     Swal.fire({
       icon: 'warning',
       title: 'Warning!',
       text: `User not Signed in!`,
     })
-
   })
 }
 }
