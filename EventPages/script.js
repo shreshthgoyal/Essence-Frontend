@@ -24,7 +24,7 @@ const url = window.location.href;
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data);
+        console.log(data);
         for(var i = 0; i < data.data.length; i++) {
             if(data.data[i].event === eventName){
                 regnButton.innerHTML = "Unregister";
