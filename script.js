@@ -186,6 +186,10 @@ if(token){
             icon: 'warning',
             title: 'Warning!',
             text: `${data.error}`,
+            confirmButtonText: `OK`,
+          })
+          .then((result) => {
+            location.href = "/RegisterLogin"
           })
         }
         else {
@@ -227,7 +231,11 @@ else
     Swal.fire({
       icon: 'warning',
       title: 'Warning!',
-      text: `User not Signed in!`,
+      text: `User not Signed In`,
+      confirmButtonText: `OK`,
+    })
+    .then((result) => {
+      location.href = "/RegisterLogin"
     })
   })
 }
