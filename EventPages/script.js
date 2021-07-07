@@ -65,7 +65,14 @@ const register_unregister = (route, fetch_method) => {
             Swal.fire({
                icon: 'success',
                text: `${data.message}`,
-             })    
+             })
+             
+             if(route === "eventregn"){
+                regnButton.innerHTML = "Unregister";
+             }
+             else{
+                regnButton.innerHTML = "Register";
+             }
         }
         
         if(status === 401){
@@ -82,7 +89,6 @@ regnButton.addEventListener("click",(event) => {
         console.log("Registering");
         const route = "eventregn";
         const fetch_method = "POST";
-        regnButton.innerHTML = "Unregister";
         register_unregister(route, fetch_method);
     }
 
@@ -90,10 +96,8 @@ regnButton.addEventListener("click",(event) => {
         console.log("Unregistering");
         const route = "eventunregister";
         const fetch_method = "DELETE";
-        regnButton.innerHTML = "Register";
         register_unregister(route, fetch_method);
     }
     
 });
-
 
