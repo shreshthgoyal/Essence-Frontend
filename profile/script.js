@@ -8,19 +8,11 @@ const g = document.querySelector(".g");
 const logoutButton = document.querySelector(".logout-button");
 let back = document.querySelector(".back");
 
-back.addEventListener("click", ()=>{
+back.addEventListener("click", () => {
   console.log("Ds")
-    window.history.back();
-  })
+  window.history.back();
+})
 
-if(e.innerHTML === "")
-e.innerHTML = `<a href="https://essencefest.netlify.app/#timeline_anchor" class="btn">Register to Events</a>`
-
-if(p.innerHTML === "")
-p.innerHTML = `<a href="https://essencefest.netlify.app/#pronites_anchor" class="btn">Register to Pronites</a>`
-
-if(g.innerHTML === "")
-g.innerHTML = `<a href="../goodies" class="btn">Buy some Goodies</a>`
 
 const dashboard = (array) => {
   div.innerHTML = "";
@@ -51,10 +43,10 @@ const event = (array) => {
 
   array.forEach((info) => {
     const { event } = info;
-
     const insideHtml = `${event}<br>`;
-
     list.innerHTML += insideHtml;
+    if (e.innerHTML === "")
+      e.innerHTML = `<a href="https://essencefest.netlify.app/#timeline_anchor" class="btn">Register to Events</a>`
   });
 };
 
@@ -65,6 +57,9 @@ const goodies = (array) => {
     const { goodie } = info;
     const insideHtml = `${goodie}<br>`;
     list.innerHTML += insideHtml;
+    if (g.innerHTML === "")
+      g.innerHTML = `<a href="../goodies" class="btn">Buy some Goodies</a>`
+
   });
 };
 
@@ -74,6 +69,8 @@ const pronite = (array) => {
     const { pronite } = info;
     const insideHtml = `${pronite}<br>`;
     list.innerHTML += insideHtml;
+    if (p.innerHTML === "")
+      p.innerHTML = `<a href="https://essencefest.netlify.app/#pronites_anchor" class="btn">Register to Pronites</a>`
   });
 };
 
