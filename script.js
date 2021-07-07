@@ -1,11 +1,11 @@
 // preloader
 
-window.onload = function(){
-    var preloader = document.querySelector('.loader-bg');
-   setTimeout(function(){
+window.onload = function () {
+  var preloader = document.querySelector('.loader-bg');
+  setTimeout(function () {
     preloader.style.display = 'none';
-   }, 2500) ;
-  };
+  }, 2500);
+};
 
 // // Countdown Timer
 
@@ -130,19 +130,22 @@ if (token) {
 }
 
 const proniteRegister = [];
+const button = [];
 const proniteid = [];
 
 var j;
 
 for (j = 1; j <= 4; j++) {
   proniteRegister[j] = document.querySelector(".pro" + j);
+  button[j] = document.querySelector(".pro" + j);
 }
 
 const url = window.location.href;
 var k;
 
 function pro_reg(k) {
-  const registerPronite = (route, fetch_method) => {
+
+  const pronite = (route, fetch_method) => {
     fetch(`${apiUrl}/pronites/${route}/${k}`, {
       method: `${fetch_method}`,
       crossDomain: true,
@@ -156,17 +159,18 @@ function pro_reg(k) {
     }).then((res) => {
       const status = res.status;
       res.json().then((data) => {
-        if (data.error) {Swal.fire({
-          icon: 'warning',
-          title: 'Warning!',
-          text: `${data.error}`,
-        })
-      }
-       else {
-        Swal.fire({
-          icon: 'success',
-          text: `${data.message}`,
-        })   
+        if (data.error) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Warning!',
+            text: `${data.error}`,
+          })
+        }
+        else {
+          Swal.fire({
+            icon: 'success',
+            text: `${data.message}`,
+          })
         }
 
         if (status === 401) {
@@ -176,15 +180,28 @@ function pro_reg(k) {
       });
     });
   };
-
   proniteRegister[k].addEventListener("click", (event) => {
     event.preventDefault();
-    const route = "proniteRegn";
-    const fetch_method = "POST";
 
-    registerPronite(route, fetch_method);
-  });
+    if (button[k].innerText === "Register") {
+      const route = "proniteRegn";
+      const fetch_method = "POST";
+      button[k].innerHTML = "Unregister";
+      pronite(route, fetch_method);
+    }
+
+    else {
+      const route = "proniteUnregister";
+      const fetch_method = "DELETE";
+      button[k].innerHTML = "Register";
+      pronite(route, fetch_method);
+    }
+  })
+
+
 }
+
+
 
 for (k = 1; k <= 4; k++) {
   pro_reg(k);
@@ -198,22 +215,22 @@ window.addEventListener("scroll", scrollFunction);
 document.body.addEventListener("touchmove", scrollFunction);
 
 function scrollFunction() {
-  if (window.scrollY > 300) { 
-    
-    if(!backToTopButton.classList.contains("btnEntrance")) {
-     
+  if (window.scrollY > 300) {
+
+    if (!backToTopButton.classList.contains("btnEntrance")) {
+
       backToTopButton.classList.remove("btnExit");
       backToTopButton.classList.add("btnEntrance");
       backToTopButton.style.display = "block";
-      
+
     }
   }
   else {
-    if(backToTopButton.classList.contains("btnEntrance")) {
-      
+    if (backToTopButton.classList.contains("btnEntrance")) {
+
       backToTopButton.classList.remove("btnEntrance");
       backToTopButton.classList.add("btnExit");
-      setTimeout(function() {
+      setTimeout(function () {
         backToTopButton.style.display = "none";
       }, 250);
     }
