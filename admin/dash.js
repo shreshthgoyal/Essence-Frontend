@@ -1,6 +1,6 @@
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
-const token = localStorage.getItem("admin");
+const token = localStorage.getItem("admin");                                //Acquiring token from local storage
 
 const table = document.querySelector(".userinfo");
 const count = document.querySelector(".count");
@@ -29,7 +29,7 @@ const admintable = (array) => {
 admintable(info);
 
 if (token) {
-    fetch(`${apiUrl}/admin/users`,
+    fetch(`${apiUrl}/admin/users`,                                                          //fetching all the user data by making a GET request
     {
       method: "GET",
       headers: {
@@ -42,21 +42,21 @@ if (token) {
         info = data.data;
         admintable(data.data);
 
-       count.innerHTML=`Users registered to fest are <b>${info.length}</b>`;
+       count.innerHTML=`Users registered to fest are <b>${info.length}</b>`;                //calculating the total number of users registered
 
 
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err);                                                                   //error handling
       })
   }
 
   const logout = document.getElementById("log");
 
-logout.addEventListener("click", 
+logout.addEventListener("click",                                                            //log out by removing the admin cookie from local storage
  () => { localStorage.removeItem("admin")}
   )
 
   if (!token) {
-    location.href = "../../index.html";
+    location.href = "../../index.html";                                                    
    }
