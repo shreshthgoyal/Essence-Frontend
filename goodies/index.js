@@ -1,4 +1,5 @@
 //shrinkable header
+const token = localStorage.getItem("cookie");
 
 let navigation = document.getElementById("head");
 let heading = document.getElementById("heading");
@@ -23,6 +24,7 @@ back.addEventListener("click", ()=>{
 
 var i;
 
+if(token) {
 function buyAnimate(i) {
   document.querySelector(".buy" + i).addEventListener("click", function (e) {
     e.preventDefault();
@@ -33,6 +35,7 @@ function buyAnimate(i) {
 
 for (i = 1; i <= 6; i++) {
   buyAnimate(i);
+}
 }
 
 const buyButton = [];
@@ -45,8 +48,6 @@ for (j = 1; j <= 6; j++) {
 }
 
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
-
-const token = localStorage.getItem("cookie");
 
 const url = window.location.href;
 
