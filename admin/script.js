@@ -6,14 +6,14 @@ admin.addEventListener("click", (event) => {
 
   event.preventDefault();
 
-  const signInEmail = document.querySelector(".mail");
+  const signInEmail = document.querySelector(".mail");                        
   const signInPassword = document.querySelector(".pass");
 
-  const email = signInEmail.value;
+  const email = signInEmail.value;                                                      //getting the email and password entered by the user in the corresponding fields
   const password = signInPassword.value;
 
   fetch(`${apiUrl}/admin/login`, {
-    method: "POST",
+    method: "POST",                                                                     //sending a POST request for admin login
     crossDomain: true,
     xhrFields: {
        withCredentials: true
@@ -21,7 +21,7 @@ admin.addEventListener("click", (event) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ email, password }),                                //sending the email and password in the body of the request
   }) 
     .then((res) => res.json())
     .then((data) => {
@@ -39,7 +39,7 @@ admin.addEventListener("click", (event) => {
      
       else if(token)
       {
-      localStorage.setItem("admin", token);
+      localStorage.setItem("admin", token);                                                 //setting the token received as admin cookie in local storage
       Swal.fire({
         icon: 'success',
         title: `${data.message}`,
@@ -48,7 +48,7 @@ admin.addEventListener("click", (event) => {
       }
 
     })
-    .catch((err) => {
+    .catch((err) => {                                                                         //error handling
       Swal.fire({
         icon: 'error',
         title: 'Error!',
