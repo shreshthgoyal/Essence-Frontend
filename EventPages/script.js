@@ -12,7 +12,7 @@ const token = localStorage.getItem("cookie");
 
 const url = window.location.href;
 
-if (token) {
+
     fetch(`${apiUrl}/user/event`,
       {
         method: "GET",
@@ -33,8 +33,8 @@ if (token) {
       })
       .catch((err) => {
         console.log(err)
-      })
-  }
+      });
+  
 
 const register_unregister = (route, fetch_method) => {
     fetch(`${apiUrl}/events/${route}/${eventid}`, {
