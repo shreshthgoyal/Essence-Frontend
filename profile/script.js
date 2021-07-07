@@ -1,10 +1,10 @@
 const div = document.querySelector(".div");
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
-
-
 const list = document.getElementById("myPopup1")
 const token = localStorage.getItem("cookie");
-
+const e = document.querySelector(".e");
+const p = document.querySelector(".p");
+const g = document.querySelector(".g");
 const logoutButton = document.querySelector(".logout-button");
 let back = document.querySelector(".back");
 
@@ -12,6 +12,15 @@ back.addEventListener("click", ()=>{
   console.log("Ds")
     window.history.back();
   })
+
+if(e.innerHTML === "")
+e.innerHTML = `<a href="https://essencefest.netlify.app/#timeline_anchor" class="btn">Register to Events</a>`
+
+if(p.innerHTML === "")
+p.innerHTML = `<a href="https://essencefest.netlify.app/#pronites_anchor" class="btn">Register to Pronites</a>`
+
+if(g.innerHTML === "")
+g.innerHTML = `<a href="../goodies" class="btn">Buy some Goodies</a>`
 
 const dashboard = (array) => {
   div.innerHTML = "";
