@@ -2,18 +2,18 @@ const regnButton = document.querySelector(".eventregn");
 
 const body = document.querySelector("body");
 
-const eventid = body.id;
+const eventid = body.id;                                                             //storing the id of the event
 
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
-const eventName = document.querySelector(".event_name").innerHTML;
+const eventName = document.querySelector(".event_name").innerHTML;                  //getting the name of the event
 
-const token = localStorage.getItem("cookie");
+const token = localStorage.getItem("cookie");                                       //acquiring token from local storage
 
 const url = window.location.href;
 
 
-    fetch(`${apiUrl}/user/event`,
+    fetch(`${apiUrl}/user/event`,                                                   //fetching the list of all events the user is registered in by making a GET request
       {
         method: "GET",
         headers: {
@@ -26,12 +26,12 @@ const url = window.location.href;
       .then((data) => {
         console.log(data.data);
         for(var i = 0; i < data.data.length; i++) {
-            if(data.data[i].event === eventName){
-                regnButton.innerHTML = "Unregister";
+            if(data.data[i].event === eventName){                                   //Checking if the user is already registered in the current event
+                regnButton.innerHTML = "Unregister";                                //Changing the Register button to Unregister if the user has already registered
             }
         };
       })
-      .catch((err) => {
+      .catch((err) => {                                                             //Error handling
         console.log(err)
       });
   
@@ -49,7 +49,7 @@ const register_unregister = (route, fetch_method) => {
         },
     })
     .then((res) => {
-        const status = res.status;
+        const status = res.status;                                                  //Storing the status sent by the backend
         res.json()
         .then((data) => {
         
@@ -62,7 +62,7 @@ const register_unregister = (route, fetch_method) => {
           confirmButtonText: `OK`,
         })
         .then((result) => {
-          location.href = "/RegisterLogin"
+          location.href = "/RegisterLogin"                                          //Redirecting to Login page if the user is not logged in
         })
         }
         else{
@@ -72,10 +72,10 @@ const register_unregister = (route, fetch_method) => {
              })
              
              if(route === "eventregn"){
-                regnButton.innerHTML = "Unregister";
+                regnButton.innerHTML = "Unregister";                               //Changing the Register button to Unregister once the user is registered.
              }
              else{
-                regnButton.innerHTML = "Register";
+                regnButton.innerHTML = "Register";                                 //And vice-versa
              }
         }
         
@@ -92,14 +92,14 @@ regnButton.addEventListener("click",(event) => {
     if(regnButton.innerHTML === "Register"){
         console.log("Registering");
         const route = "eventregn";
-        const fetch_method = "POST";
+        const fetch_method = "POST";                                                //Registering the user to the event by making a POST request
         register_unregister(route, fetch_method);
     }
 
     else if (regnButton.innerHTML === "Unregister"){
         console.log("Unregistering");
         const route = "eventunregister";
-        const fetch_method = "DELETE";
+        const fetch_method = "DELETE";                                              //Unregistering the user from the event by making a DELETE request
         register_unregister(route, fetch_method);
     }
     
