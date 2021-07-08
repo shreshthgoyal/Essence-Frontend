@@ -90,6 +90,7 @@ if (token) {
       dashboard(user);
     })
     .catch((err) => {
+      console.log(err)
       alert("Error Occured");
     });
 
