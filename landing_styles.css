@@ -647,7 +647,7 @@ nav a:hover {
 .about {
   height: 100vh;
   width: 100vw;
-/*   background-image: url("./assets/rotate-space.gif"); */
+  background-image: url("./assets/rotate-space.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1090,7 +1090,7 @@ nav a:hover {
 /* footer */
 footer {
   position: relative;
-/*   background-image: url("./assets/footerbg.gif"); */
+  background-image: url("./assets/footerbg.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1101,24 +1101,6 @@ footer {
   display: flex;
   justify-content: center;
 }
-
-.fullscreen-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -10;
-}
-
-.fullscreen-bg__video {
-  min-width: 100%;
-  min-height: 100vh;
-  z-index: -10;
-  object-fit: cover;
-}
-
 .footer-content {
   margin: auto;
   display: flex;
@@ -1184,8 +1166,6 @@ footer {
   opacity: 0.4;
   font-weight: 200;
 }
-
-
 
 /* Go to top button */
 #back-to-top-btn {
