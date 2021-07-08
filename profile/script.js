@@ -9,7 +9,6 @@ const logoutButton = document.querySelector(".logout-button");
 let back = document.querySelector(".back");
 
 back.addEventListener("click", () => {
-  console.log("Ds");
   location.href = "../";
 });
 
@@ -90,7 +89,6 @@ if (token) {
       dashboard(user);
     })
     .catch((err) => {
-      console.log(err)
       alert("Error Occured");
     });
 
