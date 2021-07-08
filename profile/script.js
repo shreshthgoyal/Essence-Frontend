@@ -90,8 +90,6 @@ if (token) {
       dashboard(user);
     })
     .catch((err) => {
-    console.log("1", err);
-      alert("Error Occured");
     });
 
   fetch(
@@ -110,8 +108,6 @@ if (token) {
       event(data.data);
     })
     .catch((err) => {
-     console.log("2", err);
-      alert("Error Occured");
     });
   fetch(
     `${apiUrl}/user/goodies`, //fetching the list of goodies the user has bought by making a GET request
@@ -129,8 +125,6 @@ if (token) {
       goodies(data.data);
     })
     .catch((err) => {
-     console.log("3", err);
-      alert("Error Occured");
     });
   fetch(
     `${apiUrl}/user/pronite`, //fetching the list of pronite shows the user is registered in by making a GET request
@@ -148,8 +142,6 @@ if (token) {
       pronite(data.data);
     })
     .catch((err) => {
-     console.log("4", err);
-      alert("Error Occured");
     });
 }
 
