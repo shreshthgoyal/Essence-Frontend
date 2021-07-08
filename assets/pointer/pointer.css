@@ -1,0 +1,33 @@
+body {
+  cursor: none;
+}
+
+.cursor,
+.cursor-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: color-dodge;
+  will-change: transform;
+  transition: 0.3s;
+  z-index: 10000;
+}
+
+.cursor {
+  background: white;
+}
+
+.cursor-border {
+  padding: 2rem;
+  border: 0.1rem solid white;
+}
+.cursor-border.on-focus {
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: transparent;
+}

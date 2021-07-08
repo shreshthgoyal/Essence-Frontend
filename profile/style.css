@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:600");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:800");
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
 body {
-  font-family: "Montserrat", sans-serif;
-  background: linear-gradient(270deg, #1c1c1c, #171717, #000);
-  background-size: 150% 150%;
-  animation: backgroundAnimation 10s ease infinite;
+  font-family: "Poppins", sans-serif;
+  background-size: 100%;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,17 +18,17 @@ body {
   right: 2%;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  border: 1px solid white;
-  color: white;
-  background-color: rgba(34, 39, 61, 255);
+  border: 1px solid rgba(26, 173, 231);
+  color: rgba(26, 173, 231);
+  background-color: white;
   font-weight: bold;
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
 .logout-button:hover {
-  color: rgb(42, 48, 78);
-  background: white;
+  color: white;
+  background: rgba(26, 173, 231);
 }
 
 .back {
@@ -41,13 +39,13 @@ body {
   border-radius: 1rem;
   color: white;
   font-weight: bold;
+  transition: all 0.3s ease-in;
   cursor: pointer;
 }
 
 .back:hover {
-  color: whitesmoke;
+  color: rgba(26, 173, 231);
 }
-
 
 .profile {
   animation: loadProfile 0.6s ease-in-out;
@@ -66,7 +64,7 @@ body {
   right: 0;
   border-radius: 10px;
   background: white;
-  box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
+  box-shadow: 0 15px 50px rgba(255, 255, 255, 0.1);
   width: calc(100% - 75px);
   height: calc(100% - 110px);
   z-index: -1;
@@ -77,7 +75,7 @@ body {
   flex-direction: row;
   align-items: stretch;
   width: 100%;
-} 
+}
 
 .profile-image {
   animation: loadProfileImage 1s ease-in-out 0.5s;
@@ -99,7 +97,6 @@ body {
   border-radius: 10px;
 }
 
-
 .profile-info {
   margin-top: 120px;
   padding: 8% 8% 2% 8%;
@@ -111,17 +108,15 @@ body {
   font-weight: 800;
   margin: 0.7rem;
   position: absolute;
-  color:  #F0F1EA;
+  color: #f0f1ea;
   animation-fill-mode: both;
 }
 
-
 h1.first-name {
-  animation: titleEffect 1s cubic-bezier(0,0.2,0.4,1);
+  animation: titleEffect 1s cubic-bezier(0, 0.2, 0.4, 1);
   top: -95px;
   left: -85px;
-} 
-
+}
 
 .profile-info h2 {
   font-size: 1rem;
@@ -132,7 +127,7 @@ h1.first-name {
 }
 
 .profile-info h2 {
-  color: #0F0F0F;
+  color: #0f0f0f;
 }
 
 .profile-info p {
@@ -151,7 +146,7 @@ h1.first-name {
 .statistics .popup {
   margin: 3%;
   flex: auto;
-  color: #0F0F0F;
+  color: #0f0f0f;
 }
 
 .icon {
@@ -205,7 +200,7 @@ h1.first-name {
   }
   h1.first-name {
     left: 10px;
-    color: #0F0F0F;
+    color: #0f0f0f;
   }
 }
 
@@ -215,7 +210,7 @@ h1.first-name {
     margin-right: 10%;
   }
 }
-
+/* 
 @keyframes backgroundAnimation {
   0% {
     background-position: 0% 50%;
@@ -226,15 +221,15 @@ h1.first-name {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 @keyframes loadProfile {
- from{
+  from {
     transform: translateY(100px);
     opacity: 0;
   }
- to {
-     transform: translateY(0px);
+  to {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -244,36 +239,41 @@ h1.first-name {
     transform: translateY(50px);
     opacity: 0;
   }
- to {
-     transform: translateY(0px);
+  to {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
 
 @keyframes titleEffect {
- from {
-   opacity:0;
-     transform: translateX(-75px);
+  from {
+    opacity: 0;
+    transform: translateX(-75px);
   }
   to {
-     transform: translateX(0px);
+    transform: translateX(0px);
     opacity: 1;
   }
 }
-
 
 /* Popup container */
 .popup {
   position: relative;
   display: inline-block;
   cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.popup:hover {
+  transform: scale(1.1);
+  color: rgba(26, 173, 231);
 }
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
   width: 160px;
-  background-color: #555;
+  background-color: rgba(26, 173, 231);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -294,23 +294,32 @@ h1.first-name {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: rgba(26, 173, 231) transparent transparent transparent;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+  animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*particles-js*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }

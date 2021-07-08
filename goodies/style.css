@@ -18,14 +18,12 @@ body {
   display: grid;
   height: 100%;
   place-items: center;
-  background-image: url("../assets/goodies-space.webp");
+  background-image: url("https://hdwallpaperim.com/wp-content/uploads/2017/08/22/444627-space-Earth.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
 }
-
-
 
 /*sidebar*/
 .sidebar {
@@ -173,7 +171,9 @@ label #cancel {
   top: 0;
   width: 100%;
   transition: height 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(29, 29, 29, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 2px 10px 0px black;
   z-index: 2000;
 }
 
@@ -189,7 +189,7 @@ label #cancel {
 }
 
 .back:hover {
-  color: black;
+  color: rgba(26, 173, 231);
 }
 
 .heading {

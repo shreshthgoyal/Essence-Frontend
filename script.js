@@ -1,11 +1,11 @@
 // preloader
 
-window.onload = function(){
-    var preloader = document.querySelector('.loader-bg');
-   setTimeout(function(){
-    preloader.style.display = 'none';
-   }, 2500) ;
-  };
+window.onload = function () {
+  var preloader = document.querySelector(".loader-bg");
+  setTimeout(function () {
+    preloader.style.display = "none";
+  }, 2500);
+};
 
 // // Countdown Timer
 
@@ -91,7 +91,6 @@ previousArrow.onclick = function () {
   showSlides(index);
 };
 
-
 //User profile
 
 var element = document.querySelector(".profile");
@@ -103,30 +102,32 @@ var admin = document.querySelector(".admin");
 var flag = 0;
 
 if (token) {
-  fetch(`${apiUrl}/user/dashboard`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": token,
-      },
-      credentials: 'same-origin'
-    })
+  fetch(`${apiUrl}/user/dashboard`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: token,
+    },
+    credentials: "same-origin",
+  })
     .then((res) => res.json())
     .then((data) => {
       element.innerHTML = `<i class="fas fa-user-astronaut"></i> ${data.data[0].name}`;
       element.classList.add("show");
       if (data.data[0].email === "essence21webkriti@gmail.com")
         admin.addEventListener("click", () => {
-          location.href = "https://essencefest.netlify.app/admin/dashboard.html";
-        })
+          location.href =
+            "https://essencefest.netlify.app/admin/dashboard.html";
+        });
       else {
-        admin.addEventListener("click", () => { location.href = "https://essencefest.netlify.app/admin/login.html"; })
+        admin.addEventListener("click", () => {
+          location.href = "https://essencefest.netlify.app/admin/login.html";
+        });
       }
     })
     .catch((err) => {
-      console.log(err)
-    })
+      console.log(err);
+    });
 }
 
 const proniteRegister = [];
@@ -156,23 +157,22 @@ function pro_reg(k) {
     }).then((res) => {
       const status = res.status;
       res.json().then((data) => {
-        if (data.error) {Swal.fire({
-          icon: 'warning',
-          title: 'Warning!',
-          text: `${data.error}`,
-        })
-      }
-       else {
-        Swal.fire({
-          icon: 'success',
-          text: `${data.message}`,
-        })   
+        if (data.error) {
+          Swal.fire({
+            icon: "warning",
+            title: "Warning!",
+            text: `${data.error}`,
+          });
+        } else {
+          Swal.fire({
+            icon: "success",
+            text: `${data.message}`,
+          });
         }
 
         if (status === 401) {
           location.href = "./RegisterLogin/";
         }
-
       });
     });
   };
@@ -198,24 +198,33 @@ window.addEventListener("scroll", scrollFunction);
 document.body.addEventListener("touchmove", scrollFunction);
 
 function scrollFunction() {
-  if (window.scrollY > 300) { 
-    
-    if(!backToTopButton.classList.contains("btnEntrance")) {
-     
+  if (window.scrollY > 300) {
+    if (!backToTopButton.classList.contains("btnEntrance")) {
       backToTopButton.classList.remove("btnExit");
       backToTopButton.classList.add("btnEntrance");
       backToTopButton.style.display = "block";
-      
     }
-  }
-  else {
-    if(backToTopButton.classList.contains("btnEntrance")) {
-      
+  } else {
+    if (backToTopButton.classList.contains("btnEntrance")) {
       backToTopButton.classList.remove("btnEntrance");
       backToTopButton.classList.add("btnExit");
-      setTimeout(function() {
+      setTimeout(function () {
         backToTopButton.style.display = "none";
       }, 250);
     }
   }
+}
+
+const regButton = document.querySelector(".register-button");
+const logoutButton = document.querySelector(".logout-button");
+
+if (token) {
+  regButton.style.visibility = "hidden";
+  logoutButton.style.visibility = "visible";
+
+  logoutButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("cookie");
+    location.href = "./";
+  });
 }
