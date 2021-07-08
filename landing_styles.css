@@ -1109,13 +1109,13 @@ footer {
     bottom: 0;
     left: 0;
     overflow: hidden;
-    z-index: 1;
+    z-index: -10;
 }
 
 .fullscreen-bg__video {
   min-width: 100%;
   min-height: 100vh;
-  z-index: 1;
+  z-index: -10;
   object-fit: cover;
 }
 
