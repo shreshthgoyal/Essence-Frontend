@@ -15,7 +15,7 @@ html {
 body {
   overflow: hidden;
   background: #bcdee7 no-repeat center center fixed;
-  background-image: url("../assets/blue-planets.gif");
+  background-image: url("../assets/blue-planets.webm");
   /* https://i.pinimg.com/originals/f6/77/7c/f6777c575157c56743a7b400df585e59.gif */
   background-size: cover;
   background-position: center center;
