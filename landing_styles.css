@@ -1101,6 +1101,24 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fullscreen-bg__video {
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  object-fit: cover;
+}
+
 .footer-content {
   margin: auto;
   display: flex;
@@ -1167,22 +1185,7 @@ footer {
   font-weight: 200;
 }
 
-.fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: 100;
-}
 
-.fullscreen-bg__video {
-  min-width: 100%;
-  min-height: 100vh;
-  z-index: 100;
-  object-fit: cover;
-}
 
 /* Go to top button */
 #back-to-top-btn {
