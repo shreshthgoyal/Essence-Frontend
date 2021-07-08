@@ -97,8 +97,6 @@ var element = document.querySelector(".profile");
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
 const token = localStorage.getItem("cookie");
-
-var admin = document.querySelector(".admin");
 var flag = 0;
 
 const proniteRegister = [];
@@ -126,16 +124,6 @@ if (token) {
     .then((data) => {
       element.innerHTML = `<i class="fas fa-user-astronaut"></i> ${data.data[0].name}`;
       element.classList.add("show");
-      if (data.data[0].email === "essence21webkriti@gmail.com")
-        admin.addEventListener("click", () => {
-          location.href =
-            "https://essencefest.netlify.app/admin/dashboard.html";
-        });
-      else {
-        admin.addEventListener("click", () => {
-          location.href = "https://essencefest.netlify.app/admin/login.html";
-        });
-      }
     })
     .catch((err) => {
     console.log(err);
