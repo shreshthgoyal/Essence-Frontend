@@ -25,7 +25,7 @@ const admintable = (array) => {
   });
 };
 
-const pronite = (array) => {
+const pronite = (array) => {                                                                   //Calculating the most popular pronite show
   if (array.length == 0) return null;
   var modeMap = {},
     maxCount = 1,
@@ -52,7 +52,7 @@ const pronite = (array) => {
 admintable(info);
 
 if (token) {
-    fetch(`${apiUrl}/admin/pronites`,
+    fetch(`${apiUrl}/admin/pronites`,                                                      //fetching all the pronites data by making a GET request
     {
       method: "GET",
       headers: {
@@ -67,12 +67,12 @@ if (token) {
         admintable(data.data);
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error Occured")
       })
   }
   const logout = document.getElementById("log");
 
-logout.addEventListener("click", 
+logout.addEventListener("click",                                                                      //log out by removing the admin cookie from local storage
  () => { localStorage.removeItem("admin")}
   )
 

@@ -149,6 +149,33 @@ h1.first-name {
   color: #0f0f0f;
 }
 
+.btn {
+  padding: .1em 2em .1em;
+  border-radius: 3px;
+  margin: 8px 8px 8px 8px;
+  color: #fbdedb;
+  background-color: #fbdedb;
+  display: inline-block;
+  background: #e74c3c;
+  transition: 0.3s;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: .85em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+  color: black;
+  background-color: #d2d2d2;
+  position: relative;
+}
+.btn:hover, .btn:focus {
+  opacity: 0.8;
+}
+.btn:active {
+  transform: scale(0.80);
+}
+
 .icon {
   background: transparent no-repeat center;
   background-size: contain;

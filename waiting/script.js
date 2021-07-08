@@ -16,13 +16,15 @@ var audioIndex = 0;
 
 audio.src = `${url}/audio/${audioList[audioIndex]}.mp3`;
 
-playBtn.addEventListener("click", () => {
+playBtn.addEventListener("click", () => {                                     //playing the song if it is paused, and pausing it if it is already playing
   if (audio.paused) {
     audio.play();
   } else {
     audio.pause();
   }
 });
+
+//Replacing the play button with pause button if the song is playing and vice-versa
 
 audio.addEventListener("play", () => {
   playBtn.innerHTML = `<i class="fas fa-pause"></i>`;
@@ -108,7 +110,7 @@ prev.addEventListener("click", () => {
 });
 
 audio.addEventListener("ended", () => {
-  playBtn.innerHTML = `<i class="fas fa-play"></i>`;
+  playBtn.innerHTML = `<i class="fas fa-play"></i>`;                //Changing the button back to play button once the song ends
 
   setTimeout(() => {
     next.click(); // simulating 'next' button click

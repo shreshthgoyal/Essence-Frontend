@@ -101,6 +101,18 @@ const token = localStorage.getItem("cookie");
 var admin = document.querySelector(".admin");
 var flag = 0;
 
+const proniteRegister = [];
+const button = [];
+
+const proniteid = [];
+
+var j;
+
+for (j = 1; j <= 4; j++) {
+  proniteRegister[j] = document.querySelector(".pro" + j);
+  button[j] = document.querySelector(".pro" + j);
+}
+
 if (token) {
   fetch(`${apiUrl}/user/dashboard`, {
     method: "GET",
@@ -126,64 +138,96 @@ if (token) {
       }
     })
     .catch((err) => {
-      console.log(err);
+      alert("Error Occured");
     });
-}
 
-const proniteRegister = [];
-const proniteid = [];
-
-var j;
-
-for (j = 1; j <= 4; j++) {
-  proniteRegister[j] = document.querySelector(".pro" + j);
+  fetch(`${apiUrl}/user/pronite`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: token,
+    },
+    credentials: "same-origin",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      for (var i = 0; i < data.data.length; i++) {
+        button[data.data[i].id].innerHTML = "Unregister";
+      }
+    })
+    .catch((err) => {
+      alert("Error Occured");
+    });
 }
 
 const url = window.location.href;
 var k;
 
 function pro_reg(k) {
-  const registerPronite = (route, fetch_method) => {
-    fetch(`${apiUrl}/pronites/${route}/${k}`, {
-      method: `${fetch_method}`,
-      crossDomain: true,
-      xhrFields: {
-        withCredentials: true,
-      },
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-    }).then((res) => {
-      const status = res.status;
-      res.json().then((data) => {
-        if (data.error) {
-          Swal.fire({
-            icon: "warning",
-            title: "Warning!",
-            text: `${data.error}`,
-          });
-        } else {
-          Swal.fire({
-            icon: "success",
-            text: `${data.message}`,
-          });
-        }
+  if (token) {
+    const pronite = (route, fetch_method) => {
+      fetch(`${apiUrl}/pronites/${route}/${k}`, {
+        method: `${fetch_method}`,
+        crossDomain: true,
+        xhrFields: {
+          withCredentials: true,
+        },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      }).then((res) => {
+        const status = res.status;
+        res.json().then((data) => {
+          if (data.error) {
+            Swal.fire({
+              icon: "warning",
+              title: "Warning!",
+              text: `${data.error}`,
+              confirmButtonText: `OK`,
+            }).then((result) => {
+              location.href = "/RegisterLogin";
+            });
+          } else {
+            Swal.fire({
+              icon: "success",
+              text: `${data.message}`,
+            });
+          }
 
-        if (status === 401) {
-          location.href = "./RegisterLogin/";
-        }
+          if (status === 401) {
+            location.href = "./RegisterLogin/";
+          }
+        });
+      });
+    };
+    proniteRegister[k].addEventListener("click", (event) => {
+      event.preventDefault();
+      if (button[k].innerText === "Register") {
+        const route = "proniteRegn";
+        const fetch_method = "POST";
+        button[k].innerHTML = "Unregister";
+        pronite(route, fetch_method);
+      } else {
+        const route = "proniteUnregister";
+        const fetch_method = "DELETE";
+        button[k].innerHTML = "Register";
+        pronite(route, fetch_method);
+      }
+    });
+  } else {
+    proniteRegister[k].addEventListener("click", (event) => {
+      event.preventDefault();
+      Swal.fire({
+        icon: "warning",
+        title: "Warning!",
+        text: `User not Signed In`,
+        confirmButtonText: `OK`,
+      }).then((result) => {
+        location.href = "/RegisterLogin";
       });
     });
-  };
-
-  proniteRegister[k].addEventListener("click", (event) => {
-    event.preventDefault();
-    const route = "proniteRegn";
-    const fetch_method = "POST";
-
-    registerPronite(route, fetch_method);
-  });
+  }
 }
 
 for (k = 1; k <= 4; k++) {

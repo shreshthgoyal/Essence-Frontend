@@ -11,7 +11,7 @@ window.onscroll = function () {
     }
 }
 
-fetch(`${apiUrl}/user/verify/${token}`, {
+fetch(`${apiUrl}/user/verify/${token}`, {                                                           //verify the user by making a PUT request
     method: "PUT",
     headers: {
         "Content-Type": "application/json",
@@ -21,7 +21,7 @@ fetch(`${apiUrl}/user/verify/${token}`, {
         (res.json()))
     .then((data) => {
         if (data.error){
-        Swal.fire({
+        Swal.fire({                                                                                     //display error if user not verified
             icon: 'warning',
             title: 'Warning!',
             text: `${data.error}`,
@@ -36,16 +36,21 @@ fetch(`${apiUrl}/user/verify/${token}`, {
               no-repeat
             `
           })
-          .then((result) => {
+          .then((result) => {   
+            if(result.isConfirmed)                                                                                        
             location.href = "/RegisterLogin"
           })
         }
         
           else{
-            Swal.fire({
+            Swal.fire({                                                                                                     //display success message if user verified
                 icon: 'success',
                 title: 'Welcome to Essence!',
                 text: `You have been verified!`,
+                confirmButtonText: `Your Profile`,
+                showCancelButton: true,
+                cancelButtonText: `Homepage`,
+                cancelButtonColor: '#4169E1',
                 width: 600,
                 padding: '3em',
                 background: '#fff',
@@ -56,15 +61,21 @@ fetch(`${apiUrl}/user/verify/${token}`, {
                 no-repeat
               `
               })
+              .then((result) => {   
+                if(result.isConfirmed)                                                                                        
+                location.href = "/RegisterLogin"
+    
+                else
+                location.href = "/"
+              })
           }
     })
-    .catch((err) => {
+    .catch((err) => {                                                                                           //error handling
         Swal.fire({
             icon: 'error',
             title: 'Warning!',
             text: `Error Verifying`,
           })
-        console.log(err);
     });
 
 const button = document.querySelector(".button-text");
@@ -72,7 +83,7 @@ const button = document.querySelector(".button-text");
 button.addEventListener("click", (event) => {
     event.preventDefault();
     console.log("click");
-    location.href = "/RegisterLogin/index.html"
+    location.href = "/RegisterLogin/index.html"                                                                     //redirect user to login page
 });
 
 

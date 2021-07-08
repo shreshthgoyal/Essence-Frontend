@@ -23,7 +23,7 @@ const admintable = (array) => {
   });
 };
 
-const goodie = (array) => {
+const goodie = (array) => {                                                         //Calculating the most popular goodie
   if (array.length == 0) return null;
   var modeMap = {},
     maxCount = 1,
@@ -50,7 +50,7 @@ const goodie = (array) => {
 admintable(info);
 
 if (token) {
-    fetch(`${apiUrl}/admin/goodies`,
+    fetch(`${apiUrl}/admin/goodies`,                                                              //fetching all the events data by making a GET request
     {
       method: "GET",
       headers: {
@@ -65,13 +65,13 @@ if (token) {
         admintable(data.data);
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error Occured")
       })
   }
 
   const logout = document.getElementById("log");
 
-logout.addEventListener("click", 
+logout.addEventListener("click",                                                              //log out by removing the admin cookie from local storage
  () => { localStorage.removeItem("admin")}
   )
 
