@@ -1,12 +1,12 @@
 //shrinkable header
-const token = localStorage.getItem("cookie");
+const token = localStorage.getItem("cookie");                                                     //acquiring token from local storage
 
 let navigation = document.getElementById("head");
 let heading = document.getElementById("heading");
 
 document.body.onscroll = function () {
   console.log(document.documentElement.scrollTop);
-  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {                     //the size of heading at the top decreases on scrolling
     navigation.style.height = "50px";
     heading.style.fontSize = "2rem";
   } else {
@@ -18,7 +18,7 @@ document.body.onscroll = function () {
 let back = document.querySelector(".back");
 
 back.addEventListener("click", ()=>{
-  console.log("Ds")
+  console.log("Ds")                                                                                     //takes the user to the previous location
     window.history.back();
   })
 
@@ -29,7 +29,7 @@ function buyAnimate(i) {
   document.querySelector(".buy" + i).addEventListener("click", function (e) {
     e.preventDefault();
 
-    document.querySelector(".card" + i).classList.toggle("expanded");
+    document.querySelector(".card" + i).classList.toggle("expanded");                                   //toggling the expanded class when user clicks on buy button
   });
 }
 
@@ -56,7 +56,7 @@ var k;
 function goodie_reg(k) {
   const purchaseGoodies = (route, fetch_method) => {
     console.log(k);
-    fetch(`${apiUrl}/goodies/${route}/${k}`, {
+    fetch(`${apiUrl}/goodies/${route}/${k}`, {                                              
       method: `${fetch_method}`,
       crossDomain: true,
       xhrFields: {
@@ -67,7 +67,7 @@ function goodie_reg(k) {
         Authorization: token,
       },
     }).then((res) => {
-      const status = res.status;
+      const status = res.status;                                                            ////Storing the status sent by the backend
       res.json().then((data) => {
         if (data.error) 
       {
@@ -77,7 +77,7 @@ function goodie_reg(k) {
           text: `User not Signed In`,
           confirmButtonText: `OK`,
         })
-        .then((result) => {
+        .then((result) => {                                                                           //Redirecting to Login page if the user is not logged in
           location.href = "/RegisterLogin"
         })
       }
@@ -96,7 +96,7 @@ function goodie_reg(k) {
     });
   };
 
-  buyButton[k].addEventListener("click", (event) => {
+  buyButton[k].addEventListener("click", (event) => {                                            //making a POST request to goodiepurchase route if the user buys a product
     event.preventDefault();
     const route = "goodiepurchase";
     const fetch_method = "POST";
