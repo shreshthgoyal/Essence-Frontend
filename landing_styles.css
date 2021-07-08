@@ -1174,7 +1174,7 @@ footer {
     bottom: 0;
     left: 0;
     overflow: hidden;
-    z-index: -100;
+    z-index: 100;
 }
 
 .fullscreen-bg__video {
