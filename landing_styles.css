@@ -647,7 +647,7 @@ nav a:hover {
 .about {
   height: 100vh;
   width: 100vw;
-  background-image: url("./assets/rotate-space.gif");
+/*   background-image: url("./assets/rotate-space.gif"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1090,7 +1090,7 @@ nav a:hover {
 /* footer */
 footer {
   position: relative;
-  background-image: url("./assets/footerbg.gif");
+/*   background-image: url("./assets/footerbg.gif"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
