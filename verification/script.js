@@ -36,7 +36,8 @@ fetch(`${apiUrl}/user/verify/${token}`, {                                       
               no-repeat
             `
           })
-          .then((result) => {                                                                                           
+          .then((result) => {   
+            if(result.isConfirmed)                                                                                        
             location.href = "/RegisterLogin"
           })
         }
@@ -46,6 +47,10 @@ fetch(`${apiUrl}/user/verify/${token}`, {                                       
                 icon: 'success',
                 title: 'Welcome to Essence!',
                 text: `You have been verified!`,
+                confirmButtonText: `Your Profile`,
+                showCancelButton: true,
+                cancelButtonText: `Homepage`,
+                cancelButtonColor: '#4169E1',
                 width: 600,
                 padding: '3em',
                 background: '#fff',
@@ -55,6 +60,13 @@ fetch(`${apiUrl}/user/verify/${token}`, {                                       
                 right
                 no-repeat
               `
+              })
+              .then((result) => {   
+                if(result.isConfirmed)                                                                                        
+                location.href = "/RegisterLogin"
+    
+                else
+                location.href = "/"
               })
           }
     })
