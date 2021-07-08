@@ -186,8 +186,13 @@ video {
   }
 }
 
+.logout-button {
+  visibility: hidden;
+}
+
 /*register button*/
-.register-button {
+.register-button,
+.logout-button {
   position: absolute;
   top: 55vh;
   right: 20vw;
@@ -204,7 +209,8 @@ video {
   z-index: 0;
 }
 
-.register-button:hover {
+.register-button:hover,
+.logout-button:hover {
   transform: scale(1.05);
 }
 
@@ -213,7 +219,8 @@ video {
   text-decoration: none;
 } */
 
-.register-button:focus {
+.register-button:focus,
+.logout-button:focus {
   outline-color: transparent;
   box-shadow: hsl(210, 80%, 42%, 0.9) 2px 2px 22px;
 }
@@ -226,6 +233,18 @@ video {
   white-space: nowrap;
   padding: 4rem 4rem;
   pointer-events: none;
+}
+
+.logout-button::after {
+  content: "Log Out";
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 4rem 4rem;
+  pointer-events: none;
+  font-weight: 700;
+  top: -3rem;
+  left: -2rem;
 }
 
 .register-button::after {
@@ -257,15 +276,18 @@ video {
   transform: translate(0, -90%) rotate(0deg);
 }
 
-.register-button:hover .right::after {
+.register-button:hover .right::after,
+.logout-button:hover .right::after {
   transform: translate(0, -47%) rotate(0deg);
 }
 
-.register-button .right:hover::after {
+.register-button .right:hover::after,
+.logout-button .right:hover::after {
   transform: translate(0, -50%) rotate(-7deg);
 }
 
-.register-button .left:hover ~ .right::after {
+.register-button .left:hover ~ .right::after,
+.logout-button .left:hover ~ .right::after {
   transform: translate(0, -50%) rotate(7deg);
 }
 
