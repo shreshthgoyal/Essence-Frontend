@@ -139,7 +139,6 @@ if (token) {
     .catch((err) => {
       alert("Error Occured")
     })
-}
 
 fetch(`${apiUrl}/user/pronite`,
     {
@@ -160,6 +159,8 @@ fetch(`${apiUrl}/user/pronite`,
     .catch((err) => {
       alert("Error Occured")
     })
+  
+}
 
 const url = window.location.href;
 var k;
