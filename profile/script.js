@@ -47,7 +47,7 @@ const event = (array) => {
   array.forEach((info) => {
     const { event } = info;                                                                                       //adding all the events the user has registered in to the list
 
-    const insideHtml = `${eved5nt}<br>`;
+    const insideHtml = `${event}<br>`;
     list.innerHTML += insideHtml;
     
   });
