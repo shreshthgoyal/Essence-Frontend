@@ -41,36 +41,43 @@ const dashboard = (array) => {
 
 const event = (array) => {
 
+  if (array.length === 0)
+      e.innerHTML = `<a href="https://essencefest.netlify.app/#timeline_anchor" class="btn">Register to Events</a>`
+
   array.forEach((info) => {
     const { event } = info;                                                                                       //adding all the events the user has registered in to the list
-    const insideHtml = `${event}<br>`;
+
+    const insideHtml = `${eved5nt}<br>`;
     list.innerHTML += insideHtml;
-    if (e.innerHTML === "")
-      e.innerHTML = `<a href="https://essencefest.netlify.app/#timeline_anchor" class="btn">Register to Events</a>`
+    
   });
 };
 
 
+
+
 const goodies = (array) => {
+  if (array.length === 0)
+  g.innerHTML = `<a href="../goodies" class="btn">Buy some Goodies</a>`
   const list = document.getElementById("myPopup2")
   array.forEach((info) => {
     const { goodie } = info;
     const insideHtml = `${goodie}<br>`;                                                                         //adding all the goodies the user has bought to the list
     list.innerHTML += insideHtml;
-    if (g.innerHTML === "")
-      g.innerHTML = `<a href="../goodies" class="btn">Buy some Goodies</a>`
+   
 
   });
 };
 
 const pronite = (array) => {
+  if (array.length === 0)
+  p.innerHTML = `<a href="https://essencefest.netlify.app/#pronites_anchor" class="btn">Register to Pronites</a>`
   const list = document.getElementById("myPopup3")
   array.forEach((info) => {
     const { pronite } = info;
     const insideHtml = `${pronite}<br>`;                                                                        //adding all the pronites the user has registered in to the list
     list.innerHTML += insideHtml;
-    if (p.innerHTML === "")
-      p.innerHTML = `<a href="https://essencefest.netlify.app/#pronites_anchor" class="btn">Register to Pronites</a>`
+
   });
 };
 
