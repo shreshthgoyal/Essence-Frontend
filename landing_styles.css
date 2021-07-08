@@ -196,7 +196,7 @@ video {
   top: 55vh;
   right: 20vw;
   padding: 1rem 2rem;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-family: "poppins";
   cursor: pointer;
   color: white;
@@ -226,7 +226,7 @@ video {
 
 .right::after,
 .register-button::after {
-  content: "Register/Login";
+  content: "Enter !";
   display: block;
   position: absolute;
   white-space: nowrap;
