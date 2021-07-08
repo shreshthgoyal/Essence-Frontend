@@ -292,7 +292,8 @@ video {
 }
 
 /*bubbles animation on button*/
-.register-button::before {
+.register-button::before,
+.logout-button::before {
   content: "";
   pointer-events: none;
   opacity: 0.6;
