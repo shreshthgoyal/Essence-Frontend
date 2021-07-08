@@ -274,3 +274,18 @@ function scrollFunction() {
     }
   }
 }
+
+
+const regButton = document.querySelector(".register-button");
+const logoutButton = document.querySelector(".logout-button");
+
+if(token){
+  regButton.style.visibility= "hidden";
+  logoutButton.style.visibility = "visible";
+
+  logoutButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("cookie");
+    location.href="./"
+  })
+}
