@@ -76,7 +76,6 @@ fetch(`${apiUrl}/user/verify/${token}`, {                                       
             title: 'Warning!',
             text: `Error Verifying`,
           })
-        console.log(err);
     });
 
 const button = document.querySelector(".button-text");

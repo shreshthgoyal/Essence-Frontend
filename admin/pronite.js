@@ -67,7 +67,7 @@ if (token) {
         admintable(data.data);
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error Occured")
       })
   }
   const logout = document.getElementById("log");

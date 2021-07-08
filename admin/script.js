@@ -25,8 +25,6 @@ admin.addEventListener("click", (event) => {
   }) 
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
-
       const token = data.token;
   
       if (data.error)
@@ -54,7 +52,6 @@ admin.addEventListener("click", (event) => {
         title: 'Error!',
         text: `Error Signing In`,
       })
-      console.log(err);
     });
 });
 

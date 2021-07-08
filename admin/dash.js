@@ -47,7 +47,7 @@ if (token) {
 
       })
       .catch((err) => {
-        console.log(err);                                                                   //error handling
+        alert("Error Occured")                                                                 //error handling
       })
   }
 

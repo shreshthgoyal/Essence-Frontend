@@ -64,7 +64,6 @@ signInForm.addEventListener("click", (event) => {
         title: 'Error!',
         text: 'Error Signing In! Try again.',
       })
-      console.log(err);
     });
 });
 
@@ -98,7 +97,6 @@ signUpForm.addEventListener("click", (event) => {
     .then((res) =>
       (res.json()))
     .then((data) => {
-      console.log(data);
       if (data.error)
         {Swal.fire({
           icon: 'warning',
@@ -120,6 +118,5 @@ signUpForm.addEventListener("click", (event) => {
         title: 'Warning!',
         text: 'Error Signing up, Try again.',
       })
-      console.log(err);
     });
 });

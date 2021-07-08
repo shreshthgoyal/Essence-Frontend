@@ -24,7 +24,6 @@ const url = window.location.href;
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data);
         for(var i = 0; i < data.data.length; i++) {
             if(data.data[i].event === eventName){                                   //Checking if the user is already registered in the current event
                 regnButton.innerHTML = "Unregister";                                //Changing the Register button to Unregister if the user has already registered
@@ -32,7 +31,7 @@ const url = window.location.href;
         };
       })
       .catch((err) => {                                                             //Error handling
-        console.log(err)
+        alert("Error Occured")
       });
   
 
@@ -90,14 +89,12 @@ regnButton.addEventListener("click",(event) => {
     event.preventDefault();
 
     if(regnButton.innerHTML === "Register"){
-        console.log("Registering");
         const route = "eventregn";
         const fetch_method = "POST";                                                //Registering the user to the event by making a POST request
         register_unregister(route, fetch_method);
     }
 
     else if (regnButton.innerHTML === "Unregister"){
-        console.log("Unregistering");
         const route = "eventunregister";
         const fetch_method = "DELETE";                                              //Unregistering the user from the event by making a DELETE request
         register_unregister(route, fetch_method);

@@ -9,7 +9,7 @@ const logoutButton = document.querySelector(".logout-button");
 let back = document.querySelector(".back");
 
 back.addEventListener("click", () => {                                                                          //takes the user to previous location
-  console.log("Ds")
+
   window.history.back();
 })
 
@@ -98,7 +98,7 @@ if (token) {
       dashboard(user);
     })
     .catch((err) => {
-      console.log(err)
+      alert("Error Occured")
     })
 
   fetch(`${apiUrl}/user/event`,                                             //fetching the list of events the user is registered in by making a GET request
@@ -115,7 +115,7 @@ if (token) {
       event(data.data);
     })
     .catch((err) => {
-      console.log(err)
+      alert("Error Occured")
     })
   fetch(`${apiUrl}/user/goodies`,                                                 //fetching the list of goodies the user has bought by making a GET request
     {
@@ -131,7 +131,7 @@ if (token) {
       goodies(data.data)
     })
     .catch((err) => {
-      console.log(err)
+      alert("Error Occured")
     })
   fetch(`${apiUrl}/user/pronite`,                                                     //fetching the list of pronite shows the user is registered in by making a GET request
     {
@@ -147,7 +147,7 @@ if (token) {
       pronite(data.data)
     })
     .catch((err) => {
-      console.log(err)
+      alert("Error Occured")
     })
 
 

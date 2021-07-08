@@ -17,8 +17,7 @@ document.body.onscroll = function () {
 
 let back = document.querySelector(".back");
 
-back.addEventListener("click", ()=>{
-  console.log("Ds")                                                                                     //takes the user to the previous location
+back.addEventListener("click", ()=>{                                                                                   //takes the user to the previous location
     window.history.back();
   })
 
@@ -55,7 +54,6 @@ var k;
 
 function goodie_reg(k) {
   const purchaseGoodies = (route, fetch_method) => {
-    console.log(k);
     fetch(`${apiUrl}/goodies/${route}/${k}`, {                                              
       method: `${fetch_method}`,
       crossDomain: true,

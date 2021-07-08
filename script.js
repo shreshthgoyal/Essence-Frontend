@@ -137,7 +137,7 @@ if (token) {
       }
     })
     .catch((err) => {
-      console.log(err)
+      alert("Error Occured")
     })
 }
 
@@ -158,7 +158,7 @@ fetch(`${apiUrl}/user/pronite`,
       }
     })
     .catch((err) => {
-      console.log(err)
+      alert("Error Occured")
     })
 
 const url = window.location.href;
@@ -180,7 +180,6 @@ if(token){
     }).then((res) => {
       const status = res.status;
       res.json().then((data) => {
-        console.log(data)
         if (data.error) {
           Swal.fire({
             icon: 'warning',
