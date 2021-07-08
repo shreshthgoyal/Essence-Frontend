@@ -8,7 +8,7 @@ const g = document.querySelector(".g");
 const logoutButton = document.querySelector(".logout-button");
 let back = document.querySelector(".back");
 
-back.addEventListener("click", () => {
+back.addEventListener("click", () => {                                                                          //takes the user to previous location
   console.log("Ds")
   window.history.back();
 })
@@ -22,8 +22,8 @@ const dashboard = (array) => {
 
     const profile = document.createElement("section");
     profile.classList.add("profile-info");
-
-    const insideHtml = ` <h1 class="first-name"> ${name} </h1> 
+                                                                                                                 //display all the user details fetched from backend
+    const insideHtml = ` <h1 class="first-name"> ${name} </h1>                                                        
       <p>Welcome to Essence, This is your dashboard. Here at Essence our users matters us the most!💜</p>
       <h2>Information</h2>
      <p>
@@ -42,7 +42,7 @@ const dashboard = (array) => {
 const event = (array) => {
 
   array.forEach((info) => {
-    const { event } = info;
+    const { event } = info;                                                                                       //adding all the events the user has registered in to the list
     const insideHtml = `${event}<br>`;
     list.innerHTML += insideHtml;
     if (e.innerHTML === "")
@@ -55,7 +55,7 @@ const goodies = (array) => {
   const list = document.getElementById("myPopup2")
   array.forEach((info) => {
     const { goodie } = info;
-    const insideHtml = `${goodie}<br>`;
+    const insideHtml = `${goodie}<br>`;                                                                         //adding all the goodies the user has bought to the list
     list.innerHTML += insideHtml;
     if (g.innerHTML === "")
       g.innerHTML = `<a href="../goodies" class="btn">Buy some Goodies</a>`
@@ -67,7 +67,7 @@ const pronite = (array) => {
   const list = document.getElementById("myPopup3")
   array.forEach((info) => {
     const { pronite } = info;
-    const insideHtml = `${pronite}<br>`;
+    const insideHtml = `${pronite}<br>`;                                                                        //adding all the pronites the user has registered in to the list
     list.innerHTML += insideHtml;
     if (p.innerHTML === "")
       p.innerHTML = `<a href="https://essencefest.netlify.app/#pronites_anchor" class="btn">Register to Pronites</a>`
@@ -76,7 +76,7 @@ const pronite = (array) => {
 
 
 if (token) {
-  fetch(`${apiUrl}/user/dashboard`,
+  fetch(`${apiUrl}/user/dashboard`,                                   //fetching all the data about the user by making a GET request
     {
       method: "GET",
       headers: {
@@ -94,7 +94,7 @@ if (token) {
       console.log(err)
     })
 
-  fetch(`${apiUrl}/user/event`,
+  fetch(`${apiUrl}/user/event`,                                             //fetching the list of events the user is registered in by making a GET request
     {
       method: "GET",
       headers: {
@@ -110,7 +110,7 @@ if (token) {
     .catch((err) => {
       console.log(err)
     })
-  fetch(`${apiUrl}/user/goodies`,
+  fetch(`${apiUrl}/user/goodies`,                                                 //fetching the list of goodies the user has bought by making a GET request
     {
       method: "GET",
       headers: {
@@ -126,7 +126,7 @@ if (token) {
     .catch((err) => {
       console.log(err)
     })
-  fetch(`${apiUrl}/user/pronite`,
+  fetch(`${apiUrl}/user/pronite`,                                                     //fetching the list of pronite shows the user is registered in by making a GET request
     {
       method: "GET",
       headers: {
@@ -147,8 +147,10 @@ if (token) {
 }
 
 if (!token) {
-  location.href = "/RegisterLogin";
+  location.href = "/RegisterLogin";                                               //redirect to login page if there is no token, that is if user is not logged in
 }
+
+//functions to display the events, goodies and pronites list when clicked
 
 function myFunction1() {
   var popup = document.getElementById("myPopup1");
@@ -165,6 +167,6 @@ function myFunction3() {
 
 logoutButton.addEventListener("click", (e) => {
   e.preventDefault();
-  localStorage.removeItem("cookie");
+  localStorage.removeItem("cookie");                                                //log out by removing cookie from local storage
   location.href = "../";
 })
