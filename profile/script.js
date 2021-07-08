@@ -89,6 +89,7 @@ if (token) {
       dashboard(user);
     })
     .catch((err) => {
+    console.log("1", err);
       alert("Error Occured");
     });
 
@@ -108,6 +109,7 @@ if (token) {
       event(data.data);
     })
     .catch((err) => {
+    console.log("2", err);
       alert("Error Occured");
     });
   fetch(
@@ -126,6 +128,7 @@ if (token) {
       goodies(data.data);
     })
     .catch((err) => {
+    console.log("3", err);
       alert("Error Occured");
     });
   fetch(
@@ -141,6 +144,7 @@ if (token) {
   )
     .then((res) => res.json())
     .then((data) => {
+    console.log("4", err);
       pronite(data.data);
     })
     .catch((err) => {
