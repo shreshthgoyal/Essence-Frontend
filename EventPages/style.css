@@ -100,7 +100,7 @@ p {
 }
 
 .back:hover {
-  color: black;
+  color: rgba(26, 173, 231);
 }
 
 .profile-card {
