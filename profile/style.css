@@ -41,6 +41,7 @@ body {
   font-weight: bold;
   transition: all 0.3s ease-in;
   cursor: pointer;
+  margin-right: 2vw;
 }
 
 .back:hover {
@@ -209,6 +210,12 @@ h1.first-name {
   right: 10px;
 }
 
+@media only screen and (max-width: 890px) {
+  .back {
+    margin-right: 11vw;
+  }
+}
+
 @media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
   .profile {
     margin: 3%;
@@ -228,6 +235,12 @@ h1.first-name {
   h1.first-name {
     left: 10px;
     color: #0f0f0f;
+  }
+  .back {
+    position: absolute;
+    top: 8vh;
+    right: 2vw;
+    margin-right: 0;
   }
 }
 
