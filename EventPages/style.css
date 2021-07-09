@@ -720,14 +720,6 @@ label #cancel {
   .sidebar a i {
     margin-left: -10px;
   }
-  a:hover {
-    width: 200px;
-    background: inherit;
-  }
-  .sidebar a:hover span {
-    opacity: 1;
-    visibility: hidden;
-  }
 }
 .envelope-area {
   position: absolute;
