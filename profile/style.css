@@ -152,7 +152,7 @@ label #cancel {
     position: absolute;
     margin-left: 23px;
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
   }
   .sidebar a {
     height: 60px;
