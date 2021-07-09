@@ -9,7 +9,7 @@
   <h1 align="center">ESSENCE 2021</h1>
 
   <p align="center">
->  Hey sky, take your hats off. We are on our way! 🚀
+  Hey sky, take your hats off. We are on our way! 🚀
    <br />
   </p>
 </p>
