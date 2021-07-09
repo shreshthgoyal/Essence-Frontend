@@ -101,15 +101,16 @@ An admin can log in to their account with the proper credentials. Only admins ha
 - ### Backend
 1. NodeJS
 2. ExpressJS
-3. Bcrypt
-4. JsonWebToken
-5. CORS
-6. NodeMailer
-7. Password-Validator
-8. Router
-9. Dotenv
-10. Helmet
-11. Compression
+3. Nodemon
+4. Bcrypt
+5. JsonWebToken
+6. CORS
+7. NodeMailer
+8. Password-Validator
+9. Router
+10. Dotenv
+11. Helmet
+12. Compression
 
 
 <div id="local-setup" />
