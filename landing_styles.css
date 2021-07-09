@@ -518,14 +518,6 @@ label #cancel {
   .sidebar a i {
     margin-left: -10px;
   }
-  a:hover {
-    width: 200px;
-    background: inherit;
-  }
-  .sidebar a:hover span {
-    opacity: 1;
-    visibility: visible;
-  }
 
   .icon-cards span {
     opacity: 1;
@@ -739,9 +731,6 @@ nav a:hover {
   overflow: hidden;
 
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -861,7 +850,7 @@ nav a:hover {
   opacity: 0;
   transition: 1s ease;
   background: rgb(26, 173, 231, 0.75);
-  font-size: 18px;
+  font-size: 1rem;
   border: white solid 6px;
   padding: 1rem;
 }
@@ -994,6 +983,7 @@ nav a:hover {
   display: none;
 }
 .slide {
+  background-position: cover;
   width: 100%;
 }
 
@@ -1003,6 +993,10 @@ nav a:hover {
   position: relative;
   height: 100%;
   width: 100%;
+}
+
+.pro-content img {
+  height: 100%;
 }
 
 .arrow {
@@ -1226,11 +1220,18 @@ footer {
 
 /* Responsiveness */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 860px) {
   html {
     overflow-x: hidden;
     overflow-y: scroll;
     font-size: 9px;
+  }
+
+  .register-button,
+  .logout-button {
+    margin: auto;
+    position: absolute;
+    transform: translateY(-50px);
   }
 
   .banner {
@@ -1241,7 +1242,7 @@ footer {
   .banner .heading {
     position: absolute;
     top: 10vh;
-    margin-left: 30px;
+    margin-left: 5px;
   }
 
   .banner .heading p {
@@ -1262,6 +1263,23 @@ footer {
     color: white;
     font-size: 1.5rem;
   }
+
+  .first {
+    display: none;
+  }
+
+  .book .second {
+    visibility: hidden;
+  }
+
+  .card-mob {
+    font-size: 0.5rem;
+  }
+
+  .card-mob .second {
+    padding-left: 30px;
+  }
+
   .heading button {
     position: absolute;
     top: 75vh;
@@ -1269,10 +1287,11 @@ footer {
   }
   nav {
     opacity: 1;
+    padding-right: 4vw;
   }
 
   nav a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 0.5rem;
   }
   .about {
@@ -1343,7 +1362,7 @@ footer {
   .card-mob {
     display: block;
     position: relative;
-    margin-left: 15vw;
+    margin: auto;
     height: 100%;
     width: 400px;
   }
@@ -1359,7 +1378,7 @@ footer {
 
   .card-mob a {
     margin-top: 10px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
   .pro-content img {
     height: 100%;
@@ -1658,5 +1677,77 @@ a {
     opacity: 1;
     filter: none;
     color: white;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pronites-header-mob,
+  .timeline-header-mob,
+  .sponsor-header-mob {
+    left: 27vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 9px;
+  }
+
+  .card-mob a {
+    font-size: 1.7rem;
+  }
+
+  .card-mob {
+    margin: 10vw;
+  }
+
+  #nav {
+    padding-top: 2rem;
+  }
+
+  #next {
+    left: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 7.5px;
+  }
+  .card-mob a {
+    font-size: 2rem;
+  }
+
+  .card-mob .second {
+    padding-left: 20px;
+  }
+  .card-mob {
+    margin: 6vw;
+  }
+
+  .pronites-header-mob,
+  .timeline-header-mob,
+  .sponsor-header-mob {
+    left: 22vw;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  html {
+    font-size: 7px;
+  }
+  .card-mob .second {
+    padding-left: 15px;
+  }
+
+  .second {
+    height: 260px;
+    width: 70%;
   }
 }

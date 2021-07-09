@@ -1,112 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Essence Fest 2021 is here! Come with us and experience our journey to the cosmos">
-    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
-<meta property="og:title" content="Essence'21" />
-<meta property="og:description" content="Essence Fest 2021 is here! Come with us and experience our journey to the cosmos" />
-<meta property="og:url" content="https://essencefest.netlify.app/" />
-<meta property="og:site_name" content="Essence Fest" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Essence Fest 2021 is here! Come with us and experience our journey to the cosmos"
+    />
+    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon" />
+    <meta property="og:title" content="Essence'21" />
+    <meta
+      property="og:description"
+      content="Essence Fest 2021 is here! Come with us and experience our journey to the cosmos"
+    />
+    <meta property="og:url" content="https://essencefest.netlify.app/" />
+    <meta property="og:site_name" content="Essence Fest" />
     <title>Essence'21</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="nav-scroll" id="nav-scroll">
-        <input type="checkbox" id="check" />
-        <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-        </label>
-        <div class="sidebar">
-            <header>Explore</header>
-            <a href="../index.html">
-                <i class="fas fa-rocket"></i>
-                <span>Homepage</span>
-            </a>
-            <a href="./index.html" class="active">
-                <i class="fas fa-user"></i>
-                <span>Onboard</span>
-            </a>
-            <a href="../goodies/">
-                <i class="fas fa-tag"></i>
-                <span>Goodies</span>
-            </a>
-            <a href="../faqpage/">
-                <i class="fas fa-question"></i>
-                <span>FAQ's</span>
-            </a>
-            <a href="../index.html#contact_anchor">
-                <i class="far fa-envelope"></i>
-                <span>Contact</span>
-            </a>
-
-            <a title="Admin-panel" href="../admin/login.html">
-              <i class="far fa-address-card"></i>
-              <span>Admin Panel</span>
-          </a>
-
-          <a title="User-panel" href="#">
-            <i class="far fa-user-circle"></i>
-            <span>User-Panel</span></a>
-        </div>
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header>Explore</header>
+        <a title="Homepage" href="../">
+          <i class="fas fa-rocket"></i>
+          <span>Homepage</span>
+        </a>
+        <a title="Sign-in" href="./RegisterLogin/" class="active">
+          <i class="fas fa-user"></i>
+          <span>Sign-in</span>
+        </a>
+        <a title="Goodies" href="./goodies/">
+          <i class="fas fa-tag"></i>
+          <span>Goodies</span>
+        </a>
+        <a title="FAQ" href="./faqpage">
+          <i class="fas fa-question"></i>
+          <span>FAQ's</span>
+        </a>
+        <a title="User-panel" href="./profile/">
+          <i class="fas fa-user-circle"></i>
+          <span>User-Panel</span>
+        </a>
+      </div>
     </div>
     <section>
-        <div class="container">
-            <div class="user signinBx">
-                <div class="imgBx"><img
-                        src="../assets/astro-jelly.webp"
-                        alt="" /></div>
-                <div class="formBx">
-                     <form action="" onsubmit="return false;">
-                        <h2>Sign In</h2>
-                        <input type="text" class="mail" name="" placeholder="Email" required />
-                        <input type="password" class="pass" name="" placeholder="Password" required />
-                        <input type="submit" name="" value="Login" class="btn-in"/>
-                        <p class="signin">
-                            Don't have an account ?
-                            <a href="#" onclick="toggleForm();">Sign Up.</a>
-                        </p>
-                    </form>
-                </div>
-            </div>
-            <div class="user signupBx">
-                <div class="formBx">
-                    <form action="" onsubmit="return false;">
-                        <h2>Create an account</h2>
-                        <input type="text" class="name" name="" placeholder="Username" required />
-                        <input type="email" class="mailin" name="" placeholder="Email Address" required />
-                        <input type="text" class="college" name="" placeholder="College" required />
-                        <input type="tel" id="phone" name="phone" placeholder="Contact"required/>  
-                        <!-- Validation of phone number left -->
-                        <input type="password" class="passin" name="" placeholder="Create Password" required />
-                        <input type="password" class="repassin" name="" placeholder="Confirm Password" required />
-                        <a href="../verification/index"><input type="submit" name="" value="Sign Up" class="btn-up" /></a>
-                        <p class="signup">
-                            Already have an account ?
-                            <a href="#" onclick="toggleForm();">Sign in.</a>
-                        </p>
-                    </form>
-                </div>
-                <div class="imgBx"><img
-                        src="../assets/astro-guitar.webp"
-                        alt="" /></div>
-            </div>
+      <div class="container">
+        <div class="user signinBx">
+          <div class="imgBx">
+            <img src="../assets/astro-jelly.webp" alt="" />
+          </div>
+          <div class="formBx">
+            <form action="" onsubmit="return false;">
+              <h2>Sign In</h2>
+              <input
+                type="text"
+                class="mail"
+                name=""
+                placeholder="Email"
+                required
+              />
+              <input
+                type="password"
+                class="pass"
+                name=""
+                placeholder="Password"
+                required
+              />
+              <input type="submit" name="" value="Login" class="btn-in" />
+              <p class="signin">
+                Don't have an account ?
+                <a href="#" onclick="toggleForm();">Sign Up.</a>
+              </p>
+            </form>
+          </div>
         </div>
+        <div class="user signupBx">
+          <div class="formBx">
+            <form action="" onsubmit="return false;">
+              <h2>Create an account</h2>
+              <input
+                type="text"
+                class="name"
+                name=""
+                placeholder="Username"
+                required
+              />
+              <input
+                type="email"
+                class="mailin"
+                name=""
+                placeholder="Email Address"
+                required
+              />
+              <input
+                type="text"
+                class="college"
+                name=""
+                placeholder="College"
+                required
+              />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Contact"
+                required
+              />
+              <!-- Validation of phone number left -->
+              <input
+                type="password"
+                class="passin"
+                name=""
+                placeholder="Create Password"
+                required
+              />
+              <input
+                type="password"
+                class="repassin"
+                name=""
+                placeholder="Confirm Password"
+                required
+              />
+              <a href="../verification/index"
+                ><input type="submit" name="" value="Sign Up" class="btn-up"
+              /></a>
+              <p class="signup">
+                Already have an account ?
+                <a href="#" onclick="toggleForm();">Sign in.</a>
+              </p>
+            </form>
+          </div>
+          <div class="imgBx">
+            <img src="../assets/astro-guitar.webp" alt="" />
+          </div>
+        </div>
+      </div>
     </section>
     <div id="particles-js"></div>
     <script src="../particles.js"></script>
     <script src="../app.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
-</body>
-
+  </body>
 </html>

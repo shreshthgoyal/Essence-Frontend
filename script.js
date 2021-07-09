@@ -272,3 +272,17 @@ if (token) {
     location.href = "./";
   });
 }
+
+//User panel
+
+const navin = document.querySelector(".in");
+
+if (token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Profile</span>`;
+}
+
+if (!token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Sign-in</span>`;
+}
