@@ -192,6 +192,7 @@ label #cancel {
   transition: all 0.3s ease-in;
   cursor: pointer;
   margin-right: 2vw;
+	z-index:50000;
 }
 
 .back:hover {
