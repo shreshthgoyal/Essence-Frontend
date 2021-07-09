@@ -343,6 +343,28 @@ h1.first-name {
   animation: fadeIn 1s;
 }
 
+/* Footer */
+
+.footer-bottom {
+    position: relative;
+    background: #000;
+    width: 100vw;
+    text-align: center;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+  }
+  .footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+  }
+  .footer-bottom span {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+  }
+
 /* Add animation (fade in the popup) */
 
 @keyframes fadeIn {
