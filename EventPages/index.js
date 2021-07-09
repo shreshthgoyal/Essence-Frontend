@@ -11,7 +11,7 @@ window.onscroll = function () {
 };
 
 back.addEventListener("click", ()=>{                                                        //takes the user to the previous location
-  window.history.back();
+  location.href = "../";
 })
 
 function Envelope() {
