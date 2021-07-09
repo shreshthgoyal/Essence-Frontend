@@ -1,8 +1,8 @@
 //shrinkable header
 const token = localStorage.getItem("cookie");                                                     //acquiring token from local storage
 
-let navigation = document.getElementById("head");
-let heading = document.getElementById("heading");
+const navigation = document.getElementById("head");
+const heading = document.getElementById("heading");
 
 document.body.onscroll = function () {
   console.log(document.documentElement.scrollTop);
