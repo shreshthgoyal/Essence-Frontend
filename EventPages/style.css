@@ -853,7 +853,6 @@ label #cancel {
   cursor: pointer;
 }
 .heads:hover {
-  color: rgba(26, 173, 231);
   transform: scale(1.1);
 }
 .close-message {
