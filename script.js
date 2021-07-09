@@ -264,3 +264,8 @@ if (token) {
     location.href = "./";
   });
 }
+
+regButton.addEventListener("click", (e)=>{
+  e.preventDefault();
+  location.href="./RegisterLogin/";
+})
