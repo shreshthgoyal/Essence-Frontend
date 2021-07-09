@@ -1,4 +1,5 @@
 [![Contributors][contributors-shield]][contributors-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d09d48c0-ee3f-41fe-b93d-9c61f88e6a5d/deploy-status)]
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -175,6 +176,6 @@ Team Name - **Pilluzy**
 - [Kshitij Ayush](https://github.com/kshitij-404)  2020IMT-047
 # 
 
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/shreshthgoyal/Essence-Frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/shreshthgoyal/Essence-Frontend/graphs/contributors
 [product-screenshot]: assets/screenshot.png
