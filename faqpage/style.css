@@ -217,15 +217,6 @@ position:fixed;
   .sidebar a i {
     margin-left: -10px;
   }
-  a:hover {
-    width: 200px;
-    background: inherit;
-  }
-  .sidebar a:hover span {
-    opacity: 1;
-    visibility: visible;
-  }
-
   .faq__question {
     opacity: 1;
     visibility: visible;
