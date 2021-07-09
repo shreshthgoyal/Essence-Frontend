@@ -210,6 +210,8 @@ label #cancel {
   padding: 0;
   margin:auto;
   margin-top: 7em;
+   margin-left: 5vw;
+  margin-right: 3vw;
 }
 
 /*.cards div contains the individual card*/
