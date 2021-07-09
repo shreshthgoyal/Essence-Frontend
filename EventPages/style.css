@@ -505,7 +505,7 @@ a {
   color: #333;
 }
 .popup .close:hover {
-  color: #06d85f;
+  color: rgba(26, 173, 231);
 }
 .popup .content {
   max-height: 30%;
@@ -851,6 +851,10 @@ label #cancel {
 }
 .heads {
   cursor: pointer;
+}
+.heads:hover {
+  color: rgba(26, 173, 231);
+  transform: scale(1.1);
 }
 .close-message {
   color: white;
