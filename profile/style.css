@@ -151,8 +151,8 @@ label #cancel {
   span {
     position: absolute;
     margin-left: 23px;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
   }
   .sidebar a {
     height: 60px;
@@ -166,7 +166,7 @@ label #cancel {
   }
   .sidebar a:hover span {
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
   }
 }
 
