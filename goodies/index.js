@@ -29,6 +29,7 @@ function buyAnimate(i) {
     e.preventDefault();
 
     document.querySelector(".card" + i).classList.toggle("expanded");                                   //toggling the expanded class when user clicks on buy button
+    setTimeout(function () {document.querySelector(".card" + i).classList.toggle("expanded");}, 3000);
   });
 }
 
