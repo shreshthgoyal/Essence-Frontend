@@ -6,7 +6,6 @@ const heading = document.getElementById("heading");
 
 document.body.onscroll = function () {
   
-  console.log(document.documentElement.scrollTop);
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {                     //the size of heading at the top decreases on scrolling
     navigation.style.height = "50px";
     heading.style.fontSize = "2rem";
