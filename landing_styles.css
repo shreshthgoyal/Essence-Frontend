@@ -1340,6 +1340,9 @@ footer {
     padding: 0;
     transform: translateY(-25%);
   }
+   .first {
+    display: none;
+  }
   .card-mob {
     display: block;
     position: relative;
