@@ -76,13 +76,6 @@ Screenshots of our website our added to [this link](https://photos.app.goo.gl/f2
 > **User Credentials** : 
 > Email : wijidat614@eyeremind.com
 > Password : PASSword123
----
-> <u>**NOTE**</u>
-> To access the **admin panel** [click here](https://essencefest.netlify.app/admin/login.html).
-> Credentials for admin our as follows : 
-> Email : essence21webkriti@gmail.com
-> Password : pilluzy123M
-> (These credentials are only valid till results are announced and will be changed afterwards.)
 
 <div id="features" />
 
