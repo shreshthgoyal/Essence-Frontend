@@ -43,6 +43,7 @@ fetch(`${apiUrl}/user/verify/${token}`, {                                       
         }
         
           else{
+            localStorage.setItem("cookie", token);
             Swal.fire({                                                                                                     //display success message if user verified
                 icon: 'success',
                 title: 'Welcome to Essence!',
@@ -63,7 +64,7 @@ fetch(`${apiUrl}/user/verify/${token}`, {                                       
               })
               .then((result) => {   
                 if(result.isConfirmed)                                                                                        
-                location.href = "/RegisterLogin"
+                location.href = "/profile"
     
                 else
                 location.href = "/"
@@ -77,17 +78,3 @@ fetch(`${apiUrl}/user/verify/${token}`, {                                       
             text: `Error Verifying`,
           })
     });
-
-const button = document.querySelector(".button-text");
-
-button.addEventListener("click", (event) => {
-    event.preventDefault();
-    console.log("click");
-    location.href = "/RegisterLogin/index.html"                                                                     //redirect user to login page
-});
-
-
-const closePopup = () =>{
-    const btnOk = document.querySelector('.btn-ok');
-      document.querySelector('.backdrop').remove();
-    }
