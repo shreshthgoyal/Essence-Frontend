@@ -380,6 +380,27 @@ label #cancel {
 .box-content .price:after {
   right: -50px;
 }
+/* Footer */
+
+.footer-bottom {
+    position: relative;
+    background: #000;
+    width: 100vw;
+    text-align: center;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+  }
+  .footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+  }
+  .footer-bottom span {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+  }
 /*particles-js*/
 #particles-js {
   position: fixed;
