@@ -183,7 +183,7 @@ label #cancel {
     flex-direction: row;
     height: auto;
     width: 100vw;
-    top: auto;
+/*     top: auto; */
     left: 0;
     bottom: 0;
     /* margin: 100px 0; */
