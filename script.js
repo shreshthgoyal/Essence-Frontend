@@ -126,9 +126,6 @@ if (token) {
       element.classList.add("show");
     })
     .catch((err) => {
-      console.log(err);
-      console.log("main 1st error");
-      alert("Error Occured");
     });
 
   fetch(`${apiUrl}/user/pronite`, {
@@ -146,9 +143,6 @@ if (token) {
       }
     })
     .catch((err) => {
-      console.log(err);
-      console.log("main 2nd err");
-      alert("Error Occured");
     });
 }
 
