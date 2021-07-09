@@ -9,7 +9,7 @@ const logoutButton = document.querySelector(".logout-button");
 let back = document.querySelector(".back");
 
 back.addEventListener("click", () => {
-  console.log("Ds");
+
   location.href = "../";
 });
 
@@ -90,7 +90,6 @@ if (token) {
       dashboard(user);
     })
     .catch((err) => {
-      alert("Error Occured");
     });
 
   fetch(
@@ -109,7 +108,6 @@ if (token) {
       event(data.data);
     })
     .catch((err) => {
-      alert("Error Occured");
     });
   fetch(
     `${apiUrl}/user/goodies`, //fetching the list of goodies the user has bought by making a GET request
@@ -127,7 +125,6 @@ if (token) {
       goodies(data.data);
     })
     .catch((err) => {
-      alert("Error Occured");
     });
   fetch(
     `${apiUrl}/user/pronite`, //fetching the list of pronite shows the user is registered in by making a GET request
@@ -145,7 +142,6 @@ if (token) {
       pronite(data.data);
     })
     .catch((err) => {
-      alert("Error Occured");
     });
 }
 
@@ -173,3 +169,17 @@ logoutButton.addEventListener("click", (e) => {
   localStorage.removeItem("cookie"); //log out by removing cookie from local storage
   location.href = "../";
 });
+
+//User panel
+
+const navin = document.querySelector(".in");
+
+if (token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Profile</span>`;
+}
+
+if (!token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Sign-in</span>`;
+}

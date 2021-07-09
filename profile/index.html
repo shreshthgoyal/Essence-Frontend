@@ -15,9 +15,40 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 <body>
+        <!--sidebar-->
+    <div class="nav-scroll" id="nav-scroll">
+      <input type="checkbox" id="check" />
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+        <div class="sidebar">
+                    <header>Explore</header>
+                    <a title="Homepage" href="../">
+                        <i class="fas fa-rocket"></i>
+                        <span>Homepage</span>
+                    </a>
+                    <a title="Sign-in" href="./" class="in active">
+                        <i class="fas fa-user"></i>
+                        <span>Sign-in</span>
+                    </a>
+                    <a title="Goodies" href="../goodies/">
+                        <i class="fas fa-tag"></i>
+                        <span>Goodies</span>
+                    </a>
+                    <a title="FAQ" href="../faqpage/">
+
+                        <i class="fas fa-question"></i>
+                        <span>FAQ's</span>
+                    </a>
+            </div>
+    </div>
+    <div class="body-wrapper">
     <button class="logout-button">Logout</button>
     <i class="fas fa-home back fa-2x"></i>
+     
     <main class="profile">
+    
       <div class="profile-bg"></div>
       <section class="container">
         <aside class="profile-image">
@@ -48,7 +79,7 @@
         </div>
       </section>
     </main>
-
+   </div>
     <!--particle js-->
     <div id="particles-js"></div>
 
@@ -56,5 +87,6 @@
     <script src="../particles.js"></script>
     <script src="../app.js"></script>
     <script src="script.js"></script>
+   
 </body>
 </html>

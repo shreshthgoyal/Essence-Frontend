@@ -39,15 +39,12 @@ body {
   overflow: hidden;
 }
 
-.loader {
-  position: absolute;
-  top: 45vh;
-  left: 45vw;
-}
+
 
 .loader img {
   height: 20vh;
   animation: loader 0.7s linear infinite alternate;
+   margin: auto;
 }
 
 @keyframes loader {
@@ -1111,13 +1108,23 @@ footer {
   margin-bottom: 50px;
 }
 
+.footer-content p {
+  margin: 1rem 0 1rem 0;
+}
+.footer-content a {
+  color: white;
+}
+.footer-content p a:hover {
+  color: #03a9f4;
+}
+
 .socials,
 .links {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 1rem 0;
 }
 .socials li,
 .links li {
@@ -1253,6 +1260,11 @@ footer {
     left: 0;
     top: 60vh;
   }
+  
+  .loader img {
+    position: fixed;
+    left: 38vw;
+  }
 
   #countdown li {
     font-size: 1.2rem;
@@ -1358,6 +1370,9 @@ footer {
     margin: 0;
     padding: 0;
     transform: translateY(-25%);
+  }
+   .first {
+    display: none;
   }
   .card-mob {
     display: block;

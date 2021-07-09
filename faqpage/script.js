@@ -18,3 +18,18 @@ details.forEach((targetDetail) => {
     });
   });
 });
+
+//User panel
+
+const navin = document.querySelector(".in");
+const token = localStorage.getItem("cookie");  
+
+if (token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Profile</span>`;
+}
+
+if (!token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Sign-in</span>`;
+}

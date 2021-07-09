@@ -29,6 +29,7 @@ function buyAnimate(i) {
     e.preventDefault();
 
     document.querySelector(".card" + i).classList.toggle("expanded");                                   //toggling the expanded class when user clicks on buy button
+    setTimeout(function () {document.querySelector(".card" + i).classList.toggle("expanded");}, 3000);
   });
 }
 
@@ -105,4 +106,18 @@ function goodie_reg(k) {
 
 for (k = 1; k <= 6; k++) {
   goodie_reg(k);
+}
+
+//User panel
+
+const navin = document.querySelector(".in");
+
+if (token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Profile</span>`;
+}
+
+if (!token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Sign-in</span>`;
 }

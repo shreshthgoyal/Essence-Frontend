@@ -12,7 +12,7 @@ const token = localStorage.getItem("cookie");                                   
 
 const url = window.location.href;
 
-
+if(token){
     fetch(`${apiUrl}/user/event`,                                                   //fetching the list of all events the user is registered in by making a GET request
       {
         method: "GET",
@@ -31,9 +31,9 @@ const url = window.location.href;
         };
       })
       .catch((err) => {                                                             //Error handling
-        alert("Error Occured")
+        console.log(err);
       });
-  
+}
 
 const register_unregister = (route, fetch_method) => {
     fetch(`${apiUrl}/events/${route}/${eventid}`, {
@@ -102,3 +102,16 @@ regnButton.addEventListener("click",(event) => {
     
 });
 
+//User panel
+
+const navin = document.querySelector(".in");
+
+if (token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Profile</span>`;
+}
+
+if (!token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Sign-in</span>`;
+}

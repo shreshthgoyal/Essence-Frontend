@@ -97,8 +97,6 @@ var element = document.querySelector(".profile");
 const apiUrl = "https://gentle-thicket-19334.herokuapp.com";
 
 const token = localStorage.getItem("cookie");
-
-var admin = document.querySelector(".admin");
 var flag = 0;
 
 const proniteRegister = [];
@@ -126,18 +124,10 @@ if (token) {
     .then((data) => {
       element.innerHTML = `<i class="fas fa-user-astronaut"></i> ${data.data[0].name}`;
       element.classList.add("show");
-      if (data.data[0].email === "essence21webkriti@gmail.com")
-        admin.addEventListener("click", () => {
-          location.href =
-            "https://essencefest.netlify.app/admin/dashboard.html";
-        });
-      else {
-        admin.addEventListener("click", () => {
-          location.href = "https://essencefest.netlify.app/admin/login.html";
-        });
-      }
     })
     .catch((err) => {
+      console.log(err);
+      console.log("main 1st error");
       alert("Error Occured");
     });
 
@@ -156,6 +146,8 @@ if (token) {
       }
     })
     .catch((err) => {
+      console.log(err);
+      console.log("main 2nd err");
       alert("Error Occured");
     });
 }
@@ -234,6 +226,20 @@ for (k = 1; k <= 4; k++) {
   pro_reg(k);
 }
 
+//User panel
+
+const navin = document.querySelector(".in");
+
+if (token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Profile</span>`;
+}
+
+if (!token) {
+  navin.innerHTML = `<i class="fas fa-user"></i>
+  <span>Sign-in</span>`;
+}
+
 // backtoTop
 
 const backToTopButton = document.getElementById("back-to-top-btn");
@@ -273,16 +279,7 @@ if (token) {
   });
 }
 
-//User panel
-
-const navin = document.querySelector(".in");
-
-if (token) {
-  navin.innerHTML = `<i class="fas fa-user"></i>
-  <span>Profile</span>`;
-}
-
-if (!token) {
-  navin.innerHTML = `<i class="fas fa-user"></i>
-  <span>Sign-in</span>`;
-}
+regButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  location.href = "./RegisterLogin/";
+});

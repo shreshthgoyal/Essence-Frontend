@@ -15,7 +15,7 @@ html {
 body {
   overflow: hidden;
   background: #bcdee7 no-repeat center center fixed;
-  background-image: url("../assets/blue-planets.gif");
+/*   background-image: url("../assets/blue-planets.webm"); */
   /* https://i.pinimg.com/originals/f6/77/7c/f6777c575157c56743a7b400df585e59.gif */
   background-size: cover;
   background-position: center center;
@@ -47,6 +47,24 @@ body:before {
     borderRadius 0.2s 2.3s linear forwards;
   animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
     borderRadius 0.2s 2.3s linear forwards;
+}
+
+/* backend video */
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  object-fit: cover;
 }
 
 h1,
@@ -569,8 +587,9 @@ a {
   width: 240px;
   left: -240px;
   height: 100%;
-  background: #1e1e1e;
-  opacity: 0.85;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 2px 10px 0px black;
   transition: all 0.5s ease;
 }
 .sidebar header {
@@ -663,10 +682,26 @@ label #cancel {
 
 @media (max-width: 860px) {
   .sidebar {
+    /* transform: rotate(-90deg); */
+    display: flex;
+    flex-direction: row;
     height: auto;
-    width: 70px;
+    width: 100vw;
+    top: auto;
     left: 0;
-    margin: 100px 0;
+    bottom: 0;
+    /* margin: 100px 0; */
+  }
+  .sidebar a.active,
+  .sidebar a:hover {
+    border-left: none;
+    border-bottom: 5px solid rgb(26, 173, 231);
+    color: rgb(26, 173, 231);
+  }
+  .sidebar a {
+    border-right: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 5px solid transparent;
   }
   header,
   #btn,
