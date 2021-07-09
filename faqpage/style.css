@@ -184,6 +184,7 @@ label #cancel {
     height: auto;
     width: 100vw;
 /*     top: auto; */
+position:fixed;
     left: 0;
     bottom: 0;
     /* margin: 100px 0; */
