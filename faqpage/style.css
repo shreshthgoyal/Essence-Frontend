@@ -25,7 +25,7 @@ body {
   font-family: "poppins", sans-serif;
 
   /* font-family: "Kumbh Sans", sans-serif; */
-
+  overflow-x: hidden;
   padding: 0;
 }
 
