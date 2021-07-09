@@ -226,7 +226,7 @@ label #cancel {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin:auto;
+  margin:0;
   margin-top: 7em;
    margin-left: 5vw;
   margin-right: 3vw;
