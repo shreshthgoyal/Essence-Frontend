@@ -21,18 +21,18 @@ window.onload = function () {
       let now = new Date().getTime(),
         distance = countDown - now;
 
-      (document.getElementById("days").textContent = Math.floor(
+      (document.getElementById("days").textContent = Math.max(0,Math.floor(
         distance / day
-      )),
-        (document.getElementById("hours").innerText = Math.floor(
+      ))),
+        (document.getElementById("hours").innerText = Math.max(0,Math.floor(
           (distance % day) / hour
-        )),
-        (document.getElementById("minutes").innerText = Math.floor(
+        ))),
+        (document.getElementById("minutes").innerText = Math.max(0,Math.floor(
           (distance % hour) / minute
-        )),
-        (document.getElementById("seconds").innerText = Math.floor(
+        ))),
+        (document.getElementById("seconds").innerText =Math.max(0, Math.floor(
           (distance % minute) / second
-        ));
+        )));
 
       //seconds
     }, 0);
